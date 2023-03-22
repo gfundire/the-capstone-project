@@ -1,3 +1,2 @@
 # the-capstone-project
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-xty8al)
+This is the website for the Little Lemon Restaurant built using the React Library
