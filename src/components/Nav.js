@@ -3,8 +3,8 @@ import Links from './Links';
 import { Link } from 'react-router-dom';
 
 const Nav = () => (
-  <nav className="navbar navbar-expand-md nav-pills fixed-top bg-light">
-    <div className="container">
+  <nav className="navbar navbar-expand-md nav-pills fixed-top bg-light mb-5">
+    <div className="container ">
       <Link to="/" className="navbar-brand">
         <img
           className="d-inline-block"
