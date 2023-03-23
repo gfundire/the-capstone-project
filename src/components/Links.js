@@ -13,8 +13,8 @@ const Links = () => {
     <>
       {links.map((link) => {
         return (
-          <li className="nav-item">
-            <Link to={link.path} className="nav-link" key={link.name}>
+          <li className="nav-item" key={link.name}>
+            <Link to={link.path} className="nav-link">
               {link.name}
             </Link>
           </li>
