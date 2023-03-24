@@ -1,14 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import links from "../utils/siteLinks";
 
-const Links = () => {
-  const links = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about-us' },
-    { name: 'Reservations', path: '/reservations' },
-    { name: 'Order Online', path: '/order-online' },
-    { name: 'Login', path: '/login' },
-  ];
+const Links = () => {  
   return (
     <>
       {links.map((link) => {

@@ -1,0 +1,12 @@
+footer {
+  background-color: red;
+}
+footer ul > li {
+  list-style-type: none;
+  color: black;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
