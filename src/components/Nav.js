@@ -18,7 +18,7 @@ const Nav = () => (
         className="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="navbarCollapse"
+        data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse"
         aria-expanded="false"
         aria-label="Toggle Navigation"

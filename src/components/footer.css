@@ -10,3 +10,7 @@ li a {
   text-decoration: none;
   color: black;
 }
+
+span{
+  display: inline-block;
+}

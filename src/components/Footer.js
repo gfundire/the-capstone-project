@@ -7,10 +7,10 @@ const Footer = () => {
   const contacts = ['Address', 'Phone', 'Email'];
 
   const socials = [
-    { name: 'facebook', url: 'https://facebook.com', icon: '' },
-    { name: 'twitter', url: 'https://twitter.com', icon: '' },
-    { name: 'linkedin', url: 'https://linkedin.com', icon: '' },
-    { name: 'google', url: 'https://google.com', icon: '' },
+    { name: 'facebook', url: 'https://facebook.com', icon: 'bi bi-facebook' },
+    { name: 'twitter', url: 'https://twitter.com', icon: 'bi bi-twitter' },
+    { name: 'linkedin', url: 'https://linkedin.com', icon: 'bi bi-linkedin' },
+    { name: 'google', url: 'https://google.com', icon: 'bi bi-google' },
   ];
 
   return (
@@ -35,7 +35,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="col-sm-3">            
+          <div className="col-sm-3">
             <ul>
               {contacts.map((link) => (
                 <li key={link}>
@@ -44,12 +44,14 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="col-sm-3">            
+          <div className="col-sm-3">
             <ul>
               {socials.map((social) => (
                 <li key={social.name}>
                   <Link to={social.url} target="_blank">
-                    <span>{<i className="bi bi-linkedin"></i>}</span>
+                    <span className="me-2">
+                      {<i className={social.icon}></i>}
+                    </span>
                     <span>{social.name}</span>
                   </Link>
                 </li>
