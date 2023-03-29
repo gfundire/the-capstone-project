@@ -1,5 +1,27 @@
-/* .img{
-  max-height: 300px;
+img{
+  max-height: 350px;
+  width: 100%;
   object-fit: cover;
   object-position: center;
-} */
+}
+
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button{
+  justify-self: flex-end;
+}
+.color-primary{
+  color: #F4CE14;
+}
+
+.round{
+  border-radius: 16px;
+}
+
+.bg-primary{
+  background-color:#F4CE14 ;
+}
