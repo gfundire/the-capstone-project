@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from './Button';
 import dishes from '../utils/dishes';
+import Card from './Card';
+
 
 const Specials = () => {
   return (
@@ -13,12 +15,13 @@ const Specials = () => {
           <Button className="float-end">Online Menu</Button>
         </div>
       </div>
-      <div className="row card-area">
-        <ul>
+      <div className="row card-area pb-5">     
           {dishes.map((d) => (
-            <li key={d.name}>{d.name}</li>
+            <div className="col-sm-4">
+            <Card key={d.name} title={d.name} text={d.description} />
+            </div>
           ))}
-        </ul>
+      
       </div>
     </section>
   );
