@@ -1,12 +1,11 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
 
 :root {
-   --color-primary: #F4CE14;
+  --color-primary: #f4ce14;
 }
 
-body{
-  background-color: #495E57;
+body {
+  background-color: #495e57;
 }
 h1,
 p {
@@ -14,21 +13,20 @@ p {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-main{
+main {
   min-height: 100vh;
 }
 
-.btn{
+.btn {
   background-color: var(--color-primary);
   color: black;
   border: none;
 }
 
-
-.btn:hover{
-background-color: black;
+.btn:hover {
+  background-color: black;
 }
 
-
-
-
+.round {
+  border-radius: 16px;
+}
