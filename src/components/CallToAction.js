@@ -1,10 +1,11 @@
 import React from 'react';
 import Section from './Section';
+import './call-to-action.css';
 
 const CallToAction = () => {
   return (
     <Section>
-      <div className="col-6">
+      <div className="col-sm-6">
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
         <p>
@@ -15,13 +16,13 @@ const CallToAction = () => {
           <button className="btn btn-primary">Reserve a Table</button>
         </div>
       </div>
-      <div className="col-6">
-        <img
-          className="img-fluid rounded"
-          src="https://images2.imgbox.com/4a/bb/t38SrfFl_o.jpg"
-          alt="little lemon"
-        />
-      </div>
+      
+      <img
+        className="img col-sm-6 rounded"
+        src="https://images2.imgbox.com/81/3e/scEJEW4D_o.png"
+        alt="little lemon"
+      />
+      
     </Section>
   );
 };
