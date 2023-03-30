@@ -15,13 +15,12 @@ const Specials = () => {
           <Button className="float-end">Online Menu</Button>
         </div>
       </div>
-      <div className="row card-area pb-5">     
+      <div className="card-area pb-5">     
           {dishes.map((d) => (
-            <div className="col-md-4" key={d.name}>
-            <Card  title={d.name} text={d.description} src={d.src} price={d.price}/>
-            </div>
-          ))}
-      
+           
+            <Card key={d.name} title={d.name} text={d.description} src={d.src} price={d.price}/>
+            
+          ))}      
       </div>
     </section>
   );
