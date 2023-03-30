@@ -6,7 +6,7 @@ import './specials.css';
 
 const Specials = () => {
   return (
-    <section className=" container specials bg-secondary">
+    <section className=" container">
       <div className="row my-3">
         <div className="col">
           <h2>This week's Specials</h2>
