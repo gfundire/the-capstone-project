@@ -18,7 +18,7 @@ const Specials = () => {
       <div className="row card-area pb-5">     
           {dishes.map((d) => (
             <div className="col-md-4" key={d.name}>
-            <Card  title={d.name} text={d.description}/>
+            <Card  title={d.name} text={d.description} src={d.src} price={d.price}/>
             </div>
           ))}
       
