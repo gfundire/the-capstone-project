@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Card = ({ title, src, text }) => {
+const Card = ({ title, text }) => {
   return (
     <div className="card" style={{ width: '18rem' }}>
-      <img className="card-img-top" src={src} alt={title} />
+      <img className="card-img-top" src="" alt={title} />
       <div className="card-body">
         <div>
           <h5 className="card-title">{title}</h5>

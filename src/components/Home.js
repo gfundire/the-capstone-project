@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Main>
         <CallToAction/>
-        {/* <Specials/> */}
+        <Specials/>
       </Main>
     </>
   );
