@@ -7,6 +7,8 @@ const About = () => {
         <p>
           Little Lemon is a charming neighbourhood bistro that serves a simple
           food and classic cocktails in a lively but casual environment.
+        </p>
+        <p>
           Co-owned by Adrian and Mario, the restaurant features a locally
           sourced menu with daily specials.
         </p>
