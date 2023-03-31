@@ -30,7 +30,7 @@ const Testimonials = () => {
         <div className ="carousel-inner">
           <div className ="carousel-item active">
             <img  src="https://placehold.jp/30/495e57/495e57/500x200.png" className ="d-block w-100" alt="..." />
-            <div className ="carousel-caption d-none d-md-block">
+            <div className ="carousel-caption d-none d-sm-block">
               <h5>First slide label</h5>
               <p>
                 Some representative placeholder content for the first slide.
@@ -39,7 +39,7 @@ const Testimonials = () => {
           </div>
           <div className ="carousel-item">
             <img src="https://placehold.jp/30/495e57/495e57/500x200.png"  alt="..." />
-            <div className ="carousel-caption d-none d-md-block">
+            <div className ="carousel-caption d-none d-sm-block">
               <h5>Second slide label</h5>
               <p>
                 Some representative placeholder content for the second slide.
@@ -48,8 +48,8 @@ const Testimonials = () => {
           </div>
           <div className ="carousel-item">
             <img src="https://placehold.jp/30/495e57/495e57/500x200.png"  className ="d-block w-100" alt="..." />
-            <div className ="carousel-caption d-none d-md-block">
-              <img src=""/>
+            <div className ="carousel-caption d-none d-sm-block">
+              
               <h5>Third slide label</h5>
               <p>
                 Some representative placeholder content for the third slide.
