@@ -14,7 +14,7 @@ const CallToAction = () => {
             traditional recipes served with a modern twist.
           </p>
           <div>
-            <Button className="float-end">Reserve a Table</Button>
+            <Button>Reserve a Table</Button>
           </div>
         </div>
         <div className="col-sm-6  mb-3">
