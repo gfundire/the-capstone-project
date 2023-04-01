@@ -2,24 +2,28 @@ import React, { useEffect, useState } from 'react';
 import './testimonials.css';
 
 const Testimonials = () => {
-  const [data, setData] = useState([]);
+  const [profiles, setProfiles] = useState([]);
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch('https://randomuser.me/api/?results=3');
-      const response = await res.json();
-      return response.results;
+    const fetchData = () => {
+      fetch('https://randomuser.me/api/?results=3')
+        .then((res) => res.json())
+        .then((res) => setProfiles(res.results))
+        .catch((error) => console.log(error));
     };
-    const profiles = fetchData();
-    setData(profiles);
-    console.log(data);
+
+    fetchData();
   }, []);
-  return data.length > 0 ? (
-    <section className="row my-3">
-      <article className="col-md-4 bg-light">Article 1</article>
-      <article className="col-md-4 bg-light">Article 1</article>
-      <article className="col-md-4 bg-light">Article 1</article>
-    </section>
-  ) : (
+
+  if (profiles.length > 0) {
+    return (
+      <section className="row my-3">
+        <article className="col-md-4 bg-light">{'DAta ' + profiles.length}</article>
+        <article className="col-md-4 bg-light">Article 1</article>
+        <article className="col-md-4 bg-light">Article 1</article>
+      </section>
+    );
+  }
+  return (
     <div className="alert alert-info" role="alert">
       No testimonials at the moment
     </div>
