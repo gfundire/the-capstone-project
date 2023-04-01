@@ -10,16 +10,15 @@ const Testimonials = () => {
         .then((res) => setProfiles(res.results))
         .catch((error) => console.log(error));
     };
-
     fetchData();
   }, []);
 
   if (profiles.length > 0) {
     return (
       <section className="row my-3">
-        <article className="col-md-4 bg-light">{'DAta ' + profiles.length}</article>
-        <article className="col-md-4 bg-light">Article 1</article>
-        <article className="col-md-4 bg-light">Article 1</article>
+        <article className="col-md-4 bg-light"><img src={profiles[0].picture.large} /></article>
+        <article className="col-md-4 bg-light"><img src={profiles[1].picture.large} /></article>
+        <article className="col-md-4 bg-light"><img src={profiles[2].picture.large} /></article>
       </section>
     );
   }
