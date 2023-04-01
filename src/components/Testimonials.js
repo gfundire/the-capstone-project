@@ -11,15 +11,16 @@ const Testimonials = () => {
     };
     const profiles = fetchData();
     setData(profiles);
+    console.log(data);
   }, []);
-  return data.length ? (
+  return data.length > 0 ? (
     <section className="row my-3">
       <article className="col-md-4 bg-light">Article 1</article>
       <article className="col-md-4 bg-light">Article 1</article>
       <article className="col-md-4 bg-light">Article 1</article>
     </section>
   ) : (
-    <div class="alert alert-info" role="alert">
+    <div className="alert alert-info" role="alert">
       No testimonials at the moment
     </div>
   );
