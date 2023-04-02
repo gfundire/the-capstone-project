@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const useProfiles = () => {
-  const [profiles, setProfiles] = useState([]);
+  const [profiles, setProfiles] = useState([]); 
   useEffect(() => {
     const fetchData = () => {
       fetch('https://randomuser.me/api/?results=3')

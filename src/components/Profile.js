@@ -1,21 +1,14 @@
 import React from 'react';
+import './profile.css';
 
-const Profile = ({ src, name }) => {
+const Profile = ({ src, name}) => {
   return (
-    <article className="p-3 m-2 col col-md-3">
-      <div className="row">
-        <div className="col-12 row">
-          <div className="col-6 bg-light">
-            <img src={src} alt="testimonial" className="rounded-pill" />
-          </div>
-          <div className="col-6 bg-light">
-            <h5>{name}</h5>
-            <p>Rating</p>
-          </div>
-        </div>
-        <div className="col-12">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </div>
+    <article className="col-md-4 profile">
+      <div className="profile text-center">
+        <img src={src} alt="testimonial" />
+        <h5 className="text-center">{name}</h5>
+        <p className="text-center">Rating</p>
+        <p>I Love Little Lemon. Their service is the best and their recipe is second to none</p>
       </div>
     </article>
   );

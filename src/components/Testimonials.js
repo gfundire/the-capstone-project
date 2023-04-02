@@ -1,18 +1,21 @@
 import React from 'react';
 import useProfiles from '../hooks/useProfiles';
-import Profile from "./Profile";
+import Profile from './Profile';
 import './testimonials.css';
 
 const Testimonials = () => {
-  const { profiles } = useProfiles();  
+  const { profiles } = useProfiles();
 
   if (profiles.length > 0) {
     return (
-      <section className="row my-3">
-        {
-          profiles.map((p)=><Profile key={p.email} name={p.name.first} src={p.picture.medium}/>)
-        }
-      </section>
+      <>
+        <h2 clasName="text-center"> Testimonials</h2>
+        <section className="row my-3">
+          {profiles.map((p) => (
+            <Profile key={p.email} name={p.name.first} src={p.picture.medium} />
+          ))}
+        </section>
+      </>
     );
   }
   return (
