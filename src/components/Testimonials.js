@@ -12,7 +12,12 @@ const Testimonials = () => {
         <h2 clasName="text-center"> Testimonials</h2>
         <section className="row my-3">
           {profiles.map((p) => (
-            <Profile key={p.email} first={p.name.first} last={p.name.last} src={p.picture.medium} />
+            <Profile
+              key={p.email}
+              first={p.name.first}
+              last={p.name.last}
+              src={p.picture.medium}
+            />
           ))}
         </section>
       </>
