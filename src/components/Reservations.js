@@ -1,16 +1,13 @@
 import React from 'react';
-import Corousel from "./Corousel";
+import Corousel from './Corousel';
 
 const Reservations = () => {
   return (
     <section>
-      <Corousel/>
+      <Corousel />
       <article>
-        <form>
-
-        </form>
+        <form></form>
       </article>
-      
     </section>
   );
 };

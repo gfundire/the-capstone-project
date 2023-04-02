@@ -2,7 +2,7 @@ import React from 'react';
 
 const Corousel = () => {
   return (
-    <section id="carouselExampleCaptions" className="carousel slide">
+    <section id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-indicators">
         <button
           type="button"
@@ -29,22 +29,22 @@ const Corousel = () => {
         <div className="carousel-item active">
           <img src="https://thumbs2.imgbox.com/75/4e/tax9MvIQ_t.jpg" className="d-block w-100" alt="little Lemon" />
           <div className="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+            <h5>Little Lemon</h5>
+            <p>We offer the best deals for any occassion.</p>
           </div>
         </div>
         <div className="carousel-item">
           <img src="https://thumbs2.imgbox.com/eb/86/nABGGzMP_t.png" className="d-block w-100" alt="Little Lemon" />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+            <h5>Little Lemon</h5>
+            <p>Our service is second to none.</p>
           </div>
         </div>
         <div className="carousel-item">
           <img src="https://thumbs2.imgbox.com/c5/2c/Sif1sLAS_t.png" className="d-block w-100" alt="Little Lemon" />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+            <h5>Little Lemon</h5>
+            <p>Come and taste our  unbeatable recipes</p>
           </div>
         </div>
       </div>
@@ -73,4 +73,3 @@ const Corousel = () => {
 export default Corousel;
 
 
-<a href="http://imgbox.com/Sif1sLAS" target="_blank"><img src="https://thumbs2.imgbox.com/c5/2c/Sif1sLAS_t.png" alt="imgbox"/></a>
