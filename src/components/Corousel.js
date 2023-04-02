@@ -34,14 +34,14 @@ const Corousel = () => {
           </div>
         </div>
         <div className="carousel-item">
-          <img src="..." className="d-block w-100" alt="Little Lemon" />
+          <img src="https://thumbs2.imgbox.com/eb/86/nABGGzMP_t.png" className="d-block w-100" alt="Little Lemon" />
           <div className="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>
           </div>
         </div>
         <div className="carousel-item">
-          <img src="..." className="d-block w-100" alt="Little Lemon" />
+          <img src="https://thumbs2.imgbox.com/c5/2c/Sif1sLAS_t.png" className="d-block w-100" alt="Little Lemon" />
           <div className="carousel-caption d-none d-md-block">
             <h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p>
@@ -73,4 +73,4 @@ const Corousel = () => {
 export default Corousel;
 
 
-<a href="http://imgbox.com/tax9MvIQ" target="_blank"><img src="https://thumbs2.imgbox.com/75/4e/tax9MvIQ_t.jpg" alt="imgbox"/></a>
+<a href="http://imgbox.com/Sif1sLAS" target="_blank"><img src="https://thumbs2.imgbox.com/c5/2c/Sif1sLAS_t.png" alt="imgbox"/></a>
