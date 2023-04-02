@@ -1,4 +1,5 @@
 import React from 'react';
+import {Star,StarHalf} from "./Star";
 import './profile.css';
 
 const Profile = ({ src, first, last }) => {
@@ -7,7 +8,7 @@ const Profile = ({ src, first, last }) => {
       <div className="profile text-center">
         <img src={src} alt="testimonial" />
         <h5 className="text-center">{first + ' ' + last}</h5>
-        <p className="text-center">Rating</p>
+        <p className="text-center"><Star/><Star/><Star/><Star/><StarHalf/></p>
         <p>
           I Love Little Lemon. Their service is the best and their recipe is
           second to none

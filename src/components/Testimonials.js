@@ -9,7 +9,7 @@ const Testimonials = () => {
   if (profiles.length > 0) {
     return (
       <>
-        <h2 clasName="text-center"> Testimonials</h2>
+        <h2 className="text-center"> Testimonials</h2>
         <section className="row my-3">
           {profiles.map((p) => (
             <Profile
