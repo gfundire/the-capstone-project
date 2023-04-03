@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 const DetailsForm = () => {
   return (
@@ -55,7 +56,7 @@ const DetailsForm = () => {
         </div>
         <div class="col-12">
           <label for="inputState" class="form-label">
-          *Ocassion
+            *Ocassion
           </label>
           <select id="occassion" class="form-select">
             <option selected>Occassion</option>
@@ -64,13 +65,18 @@ const DetailsForm = () => {
           </select>
         </div>
         <div class="col-12">
-          <textarea            
+          <textarea
             class="form-control"
             placeholder="Add a Special Request(Optional)"
             aria-label="Email"
             id="email"
             rows="5"
           ></textarea>
+        </div>
+        <div className="co1-12">
+          <Button type="submit" className="btn-lg btn-block col-12">
+            Continue
+          </Button>
         </div>
       </form>
     </>
