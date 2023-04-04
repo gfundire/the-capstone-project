@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
-import "./booking-form.css";
-
+import './booking-form.css';
 
 const BookingForm = () => {
+  const [availableTimes] = useState([
+    null,
+    '17:00',
+    '18:00',
+    '19:00',
+    '20:00',
+    '21:00',
+    '22:00',
+  ]);
+  const [occasions] = useState([null, 'Birthday', 'Engagement', 'Anniversary']);
+
   return (
     <>
       <h1 className="text-center my-5">Find a Table for Any Occasion</h1>
       <form className="row g-3 mb-5 px-5">
-        <div className="col-6">
-          <label for="date" className="form-label">
+        <div className="col-12 col-md-6">
+          <label for="res-date" className="form-label">
             *Date
           </label>
           <input
@@ -17,42 +27,42 @@ const BookingForm = () => {
             className="form-control"
             placeholder="Date"
             aria-label="Date"
-            id="date"
+            id="res-date"
           />
         </div>
-        <div className="col-6">
-          <label for="lastName" className="form-label">
-            *Time
+        <div className="col-12 col-md-6">
+          <label for="res-time" className="form-label">
+            *Choose time
           </label>
-          <input type="time" className="form-control" aria-label="time" id="time" />
-        </div>
-        <div className="col-12">
-          <label for="diners" className="form-label">
-            *Number of Diners
-          </label>
-          <input
-            type="number"
-            className="form-control"            
-            aria-label="Number of Diners"
-            id="diners"
-            min="1"
-            max="10"
-          />
-          <select id="occassion" className="form-select">
-            <option selected>No. Of diners</option>
-            {[1, 2, 3, 4, 5, 6].map((n) => (
-              <option>{n}</option>
+          <select id="res-time" className="form-select">
+            {availableTimes.map((time) => (
+              <option key={time}>{time}</option>
             ))}
           </select>
         </div>
+        <div className="col-12 col-md-6">
+          <label for="guests" className="form-label">
+            *Number of Guests
+          </label>
+          <input
+            type="number"
+            className="form-control"
+            aria-label="Number of Guests"
+            placeholder="1"
+            id="guests"
+            min="1"
+            max="10"
+          />
+        </div>
 
-        <div className="col-12">
+        <div className="col-12 col-md-6">
           <label for="occasion" className="form-label">
             *Ocassion
           </label>
-          <select id="occasion" className="form-select">            
-            <option>Birthday</option>
-            <option>Aniversary</option>
+          <select id="occasion" className="form-select">
+            {occasions.map((event) => (
+              <option key={event}>{event}</option>
+            ))}
           </select>
         </div>
         <div className="col-12">
@@ -74,7 +84,6 @@ const BookingForm = () => {
               type="radio"
               name="outside"
               id="outside"
-              
             />
             <label className="form-check-label" for="outside">
               Outside
@@ -86,28 +95,7 @@ const BookingForm = () => {
             Make Your Reservation
           </Button>
         </div>
-      {/* </form>
-      <form > */}
-   <label for="res-date">Choose date</label>
-   <input type="date" id="res-date"/>
-   <label for="res-time">Choose time</label>
-   <select id="res-time ">
-      <option>17:00</option>
-      <option>18:00</option>
-      <option>19:00</option>
-      <option>20:00</option>
-      <option>21:00</option>
-      <option>22:00</option>
-   </select>
-   <label for="guests">Number of guests</label>
-   <input type="number" placeholder="1" min="1" max="10" id="guests"/>
-   <label for="occasion">Occasion</label>
-   <select id="occasion">
-      <option>Birthday</option>
-      <option>Anniversary</option>
-   </select>
-   <input type="submit" value="Make Your reservation"/>
-</form>
+      </form>
     </>
   );
 };
