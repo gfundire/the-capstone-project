@@ -6,8 +6,9 @@ const BookingForm = () => {
   const [availableTimes, setAvailableTimes] = useState('');
   const handleChange = (e) => {
     setAvailableTimes(e.target.value);
-    console.log(availableTimes);
+    console.log(e.target.value);
   };
+  
   return (
     <>
       <h1 className="text-center my-5">Find a Table for Any Occasion</h1>
@@ -22,20 +23,19 @@ const BookingForm = () => {
             placeholder="Date"
             aria-label="Date"
             id="res_date"
+            onChange={handleChange}
           />
         </div>
         <div className="col-12 col-md-6">
           <label htmlFor="res_time" className="form-label">
             *Choose time
           </label>
-          <select
-            id="res_time"
-            className="form-select"            
-            onChange={handleChange}
-          >
-            {['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'].map(
+          <select id="res_time" className="form-select" onChange={handleChange}>
+            {['', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'].map(
               (time) => (
-                <option key={time} value={time}>{time}</option>
+                <option key={time} value={time}>
+                  {time}
+                </option>
               )
             )}
           </select>
@@ -51,7 +51,8 @@ const BookingForm = () => {
             placeholder="1"
             id="guests"
             min="1"
-            max="10"            
+            max="10"
+            onChange={handleChange}
           />
         </div>
 
@@ -59,9 +60,11 @@ const BookingForm = () => {
           <label htmlFor="occasion" className="form-label">
             *Ocassion
           </label>
-          <select id="occasion" className="form-select">
+          <select id="occasion" className="form-select" onChange={handleChange}>
             {['', 'Birthday', 'Engagement', 'Anniversary'].map((event) => (
-              <option key={event}>{event}</option>
+              <option key={event} value={event}>
+                {event}
+              </option>
             ))}
           </select>
         </div>
@@ -73,6 +76,9 @@ const BookingForm = () => {
               type="radio"
               name="standard"
               id="standard"
+              value="standard"
+              checked={availableTimes==="standard"} 
+              onChange={handleChange}  
             />
             <label className="form-check-label" htmlFor="standard">
               Standard
@@ -84,6 +90,9 @@ const BookingForm = () => {
               type="radio"
               name="outside"
               id="outside"
+              value="outside"
+              checked={availableTimes==="outside"}
+              onChange={handleChange} 
             />
             <label className="form-check-label" htmlFor="outside">
               Outside
