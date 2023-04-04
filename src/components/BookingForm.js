@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from './Button';
 import './booking-form.css';
 
-const BookingForm = () => {
-  const [availableTimes, setAvailableTimes] = useState('');
-  const handleChange = (e) => {
-    setAvailableTimes(e.target.value);
-    console.log(e.target.value);
-  };
-  
+const BookingForm = ({times,onTimesChange}) => {  
   return (
     <>
       <h1 className="text-center my-5">Find a Table for Any Occasion</h1>
@@ -23,14 +17,14 @@ const BookingForm = () => {
             placeholder="Date"
             aria-label="Date"
             id="res_date"
-            onChange={handleChange}
+            onChange={onTimesChange}
           />
         </div>
         <div className="col-12 col-md-6">
           <label htmlFor="res_time" className="form-label">
             *Choose time
           </label>
-          <select id="res_time" className="form-select" onChange={handleChange}>
+          <select id="res_time" className="form-select" onChange={onTimesChange}>
             {['', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'].map(
               (time) => (
                 <option key={time} value={time}>
@@ -52,7 +46,7 @@ const BookingForm = () => {
             id="guests"
             min="1"
             max="10"
-            onChange={handleChange}
+            onChange={onTimesChange}
           />
         </div>
 
@@ -60,7 +54,7 @@ const BookingForm = () => {
           <label htmlFor="occasion" className="form-label">
             *Ocassion
           </label>
-          <select id="occasion" className="form-select" onChange={handleChange}>
+          <select id="occasion" className="form-select" onChange={onTimesChange}>
             {['', 'Birthday', 'Engagement', 'Anniversary'].map((event) => (
               <option key={event} value={event}>
                 {event}
@@ -77,8 +71,8 @@ const BookingForm = () => {
               name="standard"
               id="standard"
               value="standard"
-              checked={availableTimes==="standard"} 
-              onChange={handleChange}  
+              checked={times==="standard"} 
+              onChange={onTimesChange}  
             />
             <label className="form-check-label" htmlFor="standard">
               Standard
@@ -91,8 +85,8 @@ const BookingForm = () => {
               name="outside"
               id="outside"
               value="outside"
-              checked={availableTimes==="outside"}
-              onChange={handleChange} 
+              checked={times==="outside"}
+              onChange={onTimesChange} 
             />
             <label className="form-check-label" htmlFor="outside">
               Outside
