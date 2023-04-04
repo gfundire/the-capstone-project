@@ -19,7 +19,7 @@ const BookingForm = () => {
       <h1 className="text-center my-5">Find a Table for Any Occasion</h1>
       <form className="row g-3 mb-5 px-5">
         <div className="col-12 col-md-6">
-          <label for="res-date" className="form-label">
+          <label htmlFor="res-date" className="form-label">
             *Date
           </label>
           <input
@@ -31,7 +31,7 @@ const BookingForm = () => {
           />
         </div>
         <div className="col-12 col-md-6">
-          <label for="res-time" className="form-label">
+          <label htmlFor="res-time" className="form-label">
             *Choose time
           </label>
           <select id="res-time" className="form-select">
@@ -41,7 +41,7 @@ const BookingForm = () => {
           </select>
         </div>
         <div className="col-12 col-md-6">
-          <label for="guests" className="form-label">
+          <label htmlFor="guests" className="form-label">
             *Number of Guests
           </label>
           <input
@@ -56,7 +56,7 @@ const BookingForm = () => {
         </div>
 
         <div className="col-12 col-md-6">
-          <label for="occasion" className="form-label">
+          <label htmlFor="occasion" className="form-label">
             *Ocassion
           </label>
           <select id="occasion" className="form-select">
@@ -74,7 +74,7 @@ const BookingForm = () => {
               name="standard"
               id="standard"
             />
-            <label className="form-check-label" for="standard">
+            <label className="form-check-label" htmlFor="standard">
               Standard
             </label>
           </div>
@@ -85,7 +85,7 @@ const BookingForm = () => {
               name="outside"
               id="outside"
             />
-            <label className="form-check-label" for="outside">
+            <label className="form-check-label" htmlFor="outside">
               Outside
             </label>
           </div>

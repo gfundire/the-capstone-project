@@ -7,7 +7,7 @@ const DetailsForm = () => {
       <h1 className="text-center my-5">Fill in Your Details</h1>
       <form className="row g-3 mb-5 px-5">
         <div class="col-6">
-          <label for="firstName" class="form-label">
+          <label htmlFor="firstName" class="form-label">
             *First Name
           </label>
           <input
@@ -19,7 +19,7 @@ const DetailsForm = () => {
           />
         </div>
         <div class="col-6">
-          <label for="lastName" class="form-label">
+          <label htmlFor="lastName" class="form-label">
             *Last Name
           </label>
           <input
@@ -31,7 +31,7 @@ const DetailsForm = () => {
           />
         </div>
         <div class="col-6">
-          <label for="phoneNumber" class="form-label">
+          <label htmlFor="phoneNumber" class="form-label">
             *Phone Number
           </label>
           <input
@@ -43,7 +43,7 @@ const DetailsForm = () => {
           />
         </div>
         <div class="col-6">
-          <label for="lastName" class="form-label">
+          <label htmlFor="lastName" class="form-label">
             *Email
           </label>
           <input
@@ -54,22 +54,16 @@ const DetailsForm = () => {
             id="email"
           />
         </div>
-        <div class="col-12">
-          <label for="inputState" class="form-label">
-            *Ocassion
+        
+        <div class="col-12 mt-4">
+        <label  htmlFor="request" class="form-label">
+            *Special Request (Optional)
           </label>
-          <select id="occassion" class="form-select">
-            <option selected>Occassion</option>
-            <option>Birthday</option>
-            <option>Aniversary</option>
-          </select>
-        </div>
-        <div class="col-12">
           <textarea
             class="form-control"
             placeholder="Add a Special Request(Optional)"
-            aria-label="Email"
-            id="email"
+            aria-label="request"
+            id="request"
             rows="5"
           ></textarea>
         </div>
