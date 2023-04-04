@@ -1,13 +1,13 @@
 import React from 'react';
 import Corousel from './Corousel';
-import DetailsForm from './DetailsForm';
+import BookingForm from './BookingForm';
 
 const Reservations = () => {
   return (
     <section>
       <Corousel />
       <article className="container">        
-        <DetailsForm />
+        <BookingForm />
       </article>
     </section>
   );
