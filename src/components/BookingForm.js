@@ -3,23 +3,17 @@ import Button from './Button';
 import './booking-form.css';
 
 const BookingForm = () => {
-  const [availableTimes] = useState([
-    null,
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00',
-  ]);
-  const [occasions] = useState([null, 'Birthday', 'Engagement', 'Anniversary']);
-
+  const [availableTimes, setAvailableTimes] = useState('');
+  const handleChange = (e) => {
+    setAvailableTimes(e.target.value);
+    console.log(availableTimes);
+  };
   return (
     <>
       <h1 className="text-center my-5">Find a Table for Any Occasion</h1>
       <form className="row g-3 mb-5 px-5">
         <div className="col-12 col-md-6">
-          <label htmlFor="res-date" className="form-label">
+          <label htmlFor="res_date" className="form-label">
             *Date
           </label>
           <input
@@ -27,17 +21,23 @@ const BookingForm = () => {
             className="form-control"
             placeholder="Date"
             aria-label="Date"
-            id="res-date"
+            id="res_date"
           />
         </div>
         <div className="col-12 col-md-6">
-          <label htmlFor="res-time" className="form-label">
+          <label htmlFor="res_time" className="form-label">
             *Choose time
           </label>
-          <select id="res-time" className="form-select">
-            {availableTimes.map((time) => (
-              <option key={time}>{time}</option>
-            ))}
+          <select
+            id="res_time"
+            className="form-select"            
+            onChange={handleChange}
+          >
+            {['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'].map(
+              (time) => (
+                <option key={time} value={time}>{time}</option>
+              )
+            )}
           </select>
         </div>
         <div className="col-12 col-md-6">
@@ -51,7 +51,7 @@ const BookingForm = () => {
             placeholder="1"
             id="guests"
             min="1"
-            max="10"
+            max="10"            
           />
         </div>
 
@@ -60,7 +60,7 @@ const BookingForm = () => {
             *Ocassion
           </label>
           <select id="occasion" className="form-select">
-            {occasions.map((event) => (
+            {['', 'Birthday', 'Engagement', 'Anniversary'].map((event) => (
               <option key={event}>{event}</option>
             ))}
           </select>
