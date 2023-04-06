@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import './booking-form.css';
 
-const BookingForm = ({times}) => {  
+const BookingForm = ({times,dispatch}) => {  
   return (
     <>
       <h1 className="text-center my-5">Find a Table for Any Occasion</h1>
@@ -17,14 +17,18 @@ const BookingForm = ({times}) => {
             placeholder="Date"
             aria-label="Date"
             id="res_date"
-            onChange={}
+            // onChange={}
           />
         </div>
         <div className="col-12 col-md-6">
           <label htmlFor="res_time" className="form-label">
             *Choose time
           </label>
-          <select id="res_time" className="form-select" onChange={}>
+          <select 
+          id="res_time"
+           className="form-select"
+           onChange={dispatch}
+           >
             {times.map(
               (time) => (
                 <option key={time} value={time}>
@@ -46,7 +50,7 @@ const BookingForm = ({times}) => {
             id="guests"
             min="1"
             max="10"
-            onChange={}
+            // onChange={}
           />
         </div>
 
@@ -54,7 +58,11 @@ const BookingForm = ({times}) => {
           <label htmlFor="occasion" className="form-label">
             *Ocassion
           </label>
-          <select id="occasion" className="form-select" onChange={}>
+          <select 
+          id="occasion" 
+          className="form-select" 
+          // onChange={}
+          >
             {['', 'Birthday', 'Engagement', 'Anniversary'].map((event) => (
               <option key={event} value={event}>
                 {event}
@@ -71,8 +79,8 @@ const BookingForm = ({times}) => {
               name="standard"
               id="standard"
               value="standard"
-              checked={times==="standard"} 
-              onChange={}  
+              // checked={times==="standard"} 
+              // onChange={}  
             />
             <label className="form-check-label" htmlFor="standard">
               Standard
@@ -85,8 +93,8 @@ const BookingForm = ({times}) => {
               name="outside"
               id="outside"
               value="outside"
-              checked={times==="outside"}
-              onChange={} 
+              // checked={times==="outside"}
+              // onChange={} 
             />
             <label className="form-check-label" htmlFor="outside">
               Outside
