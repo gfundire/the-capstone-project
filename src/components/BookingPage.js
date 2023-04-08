@@ -1,9 +1,18 @@
-import React, { useState, useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import Corousel from './Corousel';
 import BookingForm from './BookingForm';
 import DetailsForm from './DetailsForm';
+import { fetchAPI } from '../utils/api';
 
 const Reservations = () => {
+  const now = new Date('05/11/2023');
+  useEffect(() => {
+    const times = fetchAPI(now);
+    console.log(times);
+
+    initializeTimes(times);
+  }, []);
+
   const initialState = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   const updateTimes = (state, action) => {
     if (action.type === 'change_time') {
@@ -11,7 +20,7 @@ const Reservations = () => {
     }
     return state;
   };
-  const initializeTimes = () => initialState;
+  const initializeTimes = (times) => times;
   const [availableTimes, dispatch] = useReducer(
     updateTimes,
     initialState,
