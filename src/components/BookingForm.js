@@ -17,7 +17,7 @@ const BookingForm = ({times,dispatch}) => {
             placeholder="Date"
             aria-label="Date"
             id="res_date"
-            // onChange={}
+            onChange={dispatch}
           />
         </div>
         <div className="col-12 col-md-6">
@@ -27,7 +27,7 @@ const BookingForm = ({times,dispatch}) => {
           <select 
           id="res_time"
            className="form-select"
-           onChange={dispatch}
+          //  onChange={dispatch}
            >
             {times.map(
               (time) => (

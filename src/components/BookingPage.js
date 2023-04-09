@@ -5,18 +5,11 @@ import DetailsForm from './DetailsForm';
 import { fetchAPI } from '../utils/api';
 
 const Reservations = () => {
-  const now = new Date('05/11/2023');
-  useEffect(() => {
-    const times = fetchAPI(now);
-    console.log(times);
-
-    initializeTimes(times);
-  }, []);
-
+  
   const initialState = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   const updateTimes = (state, action) => {
-    if (action.type === 'change_time') {
-      return state.filter((t) => t !== action.time);
+    if (action.type === 'change_date') {
+      return fetchAPI(new Date(action.date));      
     }
     return state;
   };
@@ -28,9 +21,14 @@ const Reservations = () => {
   );
 
   const handleChange = (e) => {
-    dispatch({ type: 'change_time', time: e.target.value });
-    console.log(e.target.value);
+    dispatch({ type: 'change_date', date: e.target.value });
+    // console.log(e.target.value);
   };
+
+  
+  useEffect(() => {
+    // const times = fetchAPI(now); 
+  }, []);
 
   return (
     <section>
