@@ -1,16 +1,29 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useState, useReducer } from 'react';
 import Corousel from './Corousel';
 import BookingForm from './BookingForm';
 import DetailsForm from './DetailsForm';
 import { fetchAPI } from '../utils/api';
 
 const Reservations = () => {
-  
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [bookingData, setBookingData] = React.useState({
+    res_date: '',
+    res_time: '',
+    guests: '',
+    occasion: '',
+    standard: '',
+    outside: '',
+  });
+
+  const handleBookingData = (e) => {
+    setBookingData({ ...bookingData, [e.target.id]: e.target.value });    
+  };
+
   const initialState = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   const updateTimes = (state, action) => {
     if (action.type === 'change_date') {
       const date = new Date(action.date);
-      return fetchAPI(date);      
+      return fetchAPI(date);
     }
     return state;
   };
@@ -20,23 +33,32 @@ const Reservations = () => {
     initialState,
     initializeTimes
   );
-
-  const handleChange = (e) => {
+  const handleDateChange = (e) => {
     dispatch({ type: 'change_date', date: e.target.value });
-    // console.log(e.target.value);
+    setBookingData({ ...bookingData, [e.target.id]: e.target.value });
   };
 
-  
-  useEffect(() => {
-    // const times = fetchAPI(now); 
-  }, []);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+    console.log(bookingData);
+  };
 
   return (
     <section>
       <Corousel />
       <article className="container">
-        <BookingForm times={availableTimes} dispatch={handleChange} />
-        <DetailsForm />
+        {formSubmitted ? (
+          <DetailsForm booking={bookingData} />
+        ) : (
+          <BookingForm
+            times={availableTimes}
+            dispatch={handleDateChange}
+            handleSubmit={handleSubmit}
+            booking={bookingData}
+            handleBookingData={handleBookingData}
+          />
+        )}
       </article>
     </section>
   );

@@ -2,11 +2,18 @@ import React from 'react';
 import Button from './Button';
 import './booking-form.css';
 
-const BookingForm = ({times,dispatch}) => {  
+const BookingForm = ({
+  times,
+  dispatch,
+  handleSubmit,
+  booking,
+  handleBookingData,
+}) => {
+  
   return (
     <>
       <h1 className="text-center my-5">Find a Table for Any Occasion</h1>
-      <form className="row g-3 mb-5 px-5">
+      <form className="row g-3 mb-5 px-5" onSubmit={handleSubmit}>
         <div className="col-12 col-md-6">
           <label htmlFor="res_date" className="form-label">
             *Date
@@ -24,18 +31,16 @@ const BookingForm = ({times,dispatch}) => {
           <label htmlFor="res_time" className="form-label">
             *Choose time
           </label>
-          <select 
-          id="res_time"
-           className="form-select"
-          //  onChange={dispatch}
-           >
-            {times.map(
-              (time) => (
-                <option key={time} value={time}>
-                  {time}
-                </option>
-              )
-            )}
+          <select
+            id="res_time"
+            className="form-select"
+            onChange={handleBookingData}
+          >
+            {times.map((time) => (
+              <option key={time} value={time}>
+                {time}
+              </option>
+            ))}
           </select>
         </div>
         <div className="col-12 col-md-6">
@@ -50,18 +55,18 @@ const BookingForm = ({times,dispatch}) => {
             id="guests"
             min="1"
             max="10"
-            // onChange={}
+            onChange={handleBookingData}
           />
         </div>
 
         <div className="col-12 col-md-6">
           <label htmlFor="occasion" className="form-label">
-            *Ocassion
+            *Occasion
           </label>
-          <select 
-          id="occasion" 
-          className="form-select" 
-          // onChange={}
+          <select
+            id="occasion"
+            className="form-select"
+            onChange={handleBookingData}
           >
             {['', 'Birthday', 'Engagement', 'Anniversary'].map((event) => (
               <option key={event} value={event}>
@@ -78,9 +83,9 @@ const BookingForm = ({times,dispatch}) => {
               type="radio"
               name="standard"
               id="standard"
-              value="standard"
-              // checked={times==="standard"} 
-              // onChange={}  
+              value="Standard"
+              checked={booking.standard === 'Standard'}
+              onChange={handleBookingData}
             />
             <label className="form-check-label" htmlFor="standard">
               Standard
@@ -92,9 +97,9 @@ const BookingForm = ({times,dispatch}) => {
               type="radio"
               name="outside"
               id="outside"
-              value="outside"
-              // checked={times==="outside"}
-              // onChange={} 
+              value="Outside"
+              checked={booking.outside === 'Outside'}
+              onChange={handleBookingData}
             />
             <label className="form-check-label" htmlFor="outside">
               Outside

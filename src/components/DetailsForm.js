@@ -1,11 +1,16 @@
 import React from 'react';
 import Button from './Button';
+import BookingList from './BookingList';
 
-const DetailsForm = () => {
+const DetailsForm = ({booking}) => {
   return (
     <>
-      <h1 className="text-center my-5">Fill in Your Details</h1>
+      <h1 className="text-center my-3 display-5">Confirm Your Booking</h1>
       <form className="row g-3 mb-5 px-5">
+        <div>
+          <BookingList booking={booking}/>          
+        </div>
+        <div><h2 className="text-center my-2 display-5">Fill In Your Details</h2></div>
         <div className="col-6">
           <label htmlFor="firstName" className="form-label">
             *First Name
@@ -54,9 +59,9 @@ const DetailsForm = () => {
             id="email"
           />
         </div>
-        
+
         <div className="col-12 mt-4">
-        <label  htmlFor="request" className="form-label">
+          <label htmlFor="request" className="form-label">
             *Special Request (Optional)
           </label>
           <textarea
