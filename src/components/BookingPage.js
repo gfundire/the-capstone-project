@@ -17,7 +17,6 @@ const Reservations = () => {
   const handleBookingData = (e) => {
     setBookingData({ ...bookingData, [e.target.id]: e.target.value });    
   };
-
   const initialState = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   const updateTimes = (state, action) => {
     if (action.type === 'change_date') {
@@ -42,7 +41,6 @@ const Reservations = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormSubmitted(true);
-    console.log(bookingData);
   };
 
   return (
