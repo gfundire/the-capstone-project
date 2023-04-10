@@ -5,12 +5,12 @@ import BookingList from './BookingList';
 const DetailsForm = ({booking}) => {
   return (
     <>
-      <h1 className="text-center my-3 display-5">Confirm Your Booking</h1>
+      <h1 className="text-center my-3 display-5">Your Reservation</h1>
       <form className="row g-3 mb-5 px-5">
         <div>
           <BookingList booking={booking}/>          
         </div>
-        <div><h2 className="text-center my-2 display-5">Fill In Your Details</h2></div>
+        <div><h2 className="text-center my-2 display-5">Personal Details</h2></div>
         <div className="col-6">
           <label htmlFor="firstName" className="form-label">
             *First Name
@@ -74,7 +74,7 @@ const DetailsForm = ({booking}) => {
         </div>
         <div className="co1-12">
           <Button type="submit" className="btn-lg btn-block col-12">
-            Continue
+            Confirm Reservation
           </Button>
         </div>
       </form>
