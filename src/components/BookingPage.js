@@ -11,11 +11,11 @@ const Reservations = () => {
     res_time: '',
     guests: '',
     occasion: '',
-    seatingOption: ''
+    seatingOption: '',
   });
 
   const handleBookingData = (e) => {
-    setBookingData({ ...bookingData, [e.target.id]: e.target.value });    
+    setBookingData({ ...bookingData, [e.target.id]: e.target.value });
   };
   const initialState = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   const updateTimes = (state, action) => {
@@ -35,32 +35,34 @@ const Reservations = () => {
     dispatch({ type: 'change_date', date: e.target.value });
     setBookingData({ ...bookingData, [e.target.id]: e.target.value });
   };
- const handleOptionChange = (e)=>{
-  setBookingData({ ...bookingData, seatingOption: e.target.value });
- }
+  const handleOptionChange = (e) => {
+    setBookingData({ ...bookingData, seatingOption: e.target.value });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormSubmitted(true);
   };
 
   return (
-    <section>
-      <Corousel />
-      <article className="container">
-        {formSubmitted ? (
-          <DetailsForm booking={bookingData} />
-        ) : (
-          <BookingForm
-            times={availableTimes}
-            dispatch={handleDateChange}
-            handleSubmit={handleSubmit}
-            booking={bookingData}
-            handleBookingData={handleBookingData}
-            handleOptionChange={handleOptionChange}
-          />
-        )}
-      </article>
-    </section>
+    <main>
+      <section>
+        <Corousel />
+        <article>
+          {formSubmitted ? (
+            <DetailsForm booking={bookingData} />
+          ) : (
+            <BookingForm
+              times={availableTimes}
+              dispatch={handleDateChange}
+              handleSubmit={handleSubmit}
+              booking={bookingData}
+              handleBookingData={handleBookingData}
+              handleOptionChange={handleOptionChange}
+            />
+          )}
+        </article>
+      </section>
+    </main>
   );
 };
 
