@@ -2,11 +2,15 @@ import React from 'react';
 import Button from './Button';
 import BookingList from './BookingList';
 
-const DetailsForm = ({booking}) => {
+const DetailsForm = ({booking,onSubmit}) => {  
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    onSubmit();
+  };
   return (
     <>
       <h1 className="text-center my-3 display-5">Your Reservation</h1>
-      <form className="row g-3 mb-5 px-5">
+      <form className="row g-3 mb-5 px-5" onSubmit={handleSubmit}>
         <div>
           <BookingList booking={booking}/>          
         </div>

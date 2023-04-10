@@ -1,10 +1,12 @@
 import React, { useState, useReducer } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Corousel from './Corousel';
 import BookingForm from './BookingForm';
 import DetailsForm from './DetailsForm';
-import { fetchAPI } from '../utils/api';
+import { fetchAPI, submitAPI } from '../utils/api';
 
 const Main = () => {
+  const navigate = useNavigate();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [bookingData, setBookingData] = React.useState({
     res_date: '',
@@ -13,7 +15,13 @@ const Main = () => {
     occasion: '',
     seatingOption: '',
   });
-
+  const submitForm = (formData) => {
+    const result = submitAPI();
+    if (result) {
+      navigate('/confirmation');
+    }
+    return;
+  };
   const handleBookingData = (e) => {
     setBookingData({ ...bookingData, [e.target.id]: e.target.value });
   };
@@ -49,7 +57,10 @@ const Main = () => {
         <Corousel />
         <article>
           {formSubmitted ? (
-            <DetailsForm booking={bookingData} />
+            <DetailsForm
+              booking={bookingData}
+              onSubmit={() => submitForm(bookingData)}
+            />
           ) : (
             <BookingForm
               times={availableTimes}
