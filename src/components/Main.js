@@ -4,7 +4,7 @@ import BookingForm from './BookingForm';
 import DetailsForm from './DetailsForm';
 import { fetchAPI } from '../utils/api';
 
-const Reservations = () => {
+const Main = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [bookingData, setBookingData] = React.useState({
     res_date: '',
@@ -66,4 +66,4 @@ const Reservations = () => {
   );
 };
 
-export default Reservations;
+export default Main;
