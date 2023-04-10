@@ -8,8 +8,8 @@ const BookingForm = ({
   handleSubmit,
   booking,
   handleBookingData,
+  handleOptionChange,
 }) => {
-  
   return (
     <>
       <h1 className="text-center my-5">Find a Table for Any Occasion</h1>
@@ -24,6 +24,7 @@ const BookingForm = ({
             placeholder="Date"
             aria-label="Date"
             id="res_date"
+            value={booking.date}
             onChange={dispatch}
           />
         </div>
@@ -55,6 +56,7 @@ const BookingForm = ({
             id="guests"
             min="1"
             max="10"
+            value={booking.guests}
             onChange={handleBookingData}
           />
         </div>
@@ -84,8 +86,8 @@ const BookingForm = ({
               name="standard"
               id="standard"
               value="Standard"
-              checked={booking.standard === 'Standard'}
-              onChange={handleBookingData}
+              checked={booking.seatingOption === 'Standard'}
+              onChange={handleOptionChange}
             />
             <label className="form-check-label" htmlFor="standard">
               Standard
@@ -98,8 +100,8 @@ const BookingForm = ({
               name="outside"
               id="outside"
               value="Outside"
-              checked={booking.outside === 'Outside'}
-              onChange={handleBookingData}
+              checked={booking.seatingOption === 'Outside'}
+              onChange={handleOptionChange}
             />
             <label className="form-check-label" htmlFor="outside">
               Outside

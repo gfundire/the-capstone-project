@@ -11,8 +11,7 @@ const Reservations = () => {
     res_time: '',
     guests: '',
     occasion: '',
-    standard: '',
-    outside: '',
+    seatingOption: ''
   });
 
   const handleBookingData = (e) => {
@@ -37,7 +36,9 @@ const Reservations = () => {
     dispatch({ type: 'change_date', date: e.target.value });
     setBookingData({ ...bookingData, [e.target.id]: e.target.value });
   };
-
+ const handleOptionChange = (e)=>{
+  setBookingData({ ...bookingData, seatingOption: e.target.value });
+ }
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormSubmitted(true);
@@ -57,6 +58,7 @@ const Reservations = () => {
             handleSubmit={handleSubmit}
             booking={bookingData}
             handleBookingData={handleBookingData}
+            handleOptionChange={handleOptionChange}
           />
         )}
       </article>
