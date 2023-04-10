@@ -1,8 +1,11 @@
 import React from 'react';
-import Button from "./Button";;
+import { useNavigate } from 'react-router-dom';
+import Button from './Button';
 import './call-to-action.css';
 
 const CallToAction = () => {
+  const navigate = useNavigate();
+  const handleClik = () => navigate('/bookings');
   return (
     <section className="container my-5">
       <div className="row">
@@ -14,7 +17,7 @@ const CallToAction = () => {
             traditional recipes served with a modern twist.
           </p>
           <div>
-            <Button>Reserve a Table</Button>
+            <button className="btn btn-primary" onClick={handleClik}>Reserve a Table</button>
           </div>
         </div>
         <div className="col-sm-6  mb-3">
@@ -24,7 +27,7 @@ const CallToAction = () => {
             alt="little lemon"
           />
         </div>
-     </div>
+      </div>
     </section>
   );
 };
