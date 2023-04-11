@@ -70,7 +70,6 @@ export default function App() {
   return (
     <>
       <Nav />
-      <main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
@@ -106,7 +105,6 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
-      </main>
       <Footer />
     </>
   );
