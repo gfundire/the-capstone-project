@@ -30,7 +30,7 @@ const BookingForm = ({
               aria-label="Date"
               id="res_date"
               name="res_date"
-              value={booking.date}
+              value={booking.res_date}
               onChange={dispatch}
               required
             />
@@ -43,6 +43,7 @@ const BookingForm = ({
               id="res_time"
               name="res_time"
               className="form-select"
+              value={booking.res_time}
               onChange={handleBookingData}
               required
             >
@@ -79,6 +80,7 @@ const BookingForm = ({
             <select
               id="occasion"
               name="occasion"
+              value={booking.occasion}
               required
               className="form-select"
               onChange={handleBookingData}
