@@ -6,7 +6,6 @@ const BookingListItem = ({ children }) => {
   const goBack = (e) => {
     e.preventDefault();
     navigate('/reservations/bookings');
-    console.log('navigating Back');
   };
   return (
     <li className="list-group-item d-flex justify-content-between align-items-start">

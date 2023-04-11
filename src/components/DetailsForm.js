@@ -3,7 +3,8 @@ import Button from './Button';
 import BookingList from './BookingList';
 import Corousel from './Corousel';
 
-const DetailsForm = ({ booking, onSubmit, setData }) => {
+const DetailsForm = ({ booking, onSubmit,  formik}) => {
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit();
@@ -32,6 +33,9 @@ const DetailsForm = ({ booking, onSubmit, setData }) => {
             placeholder="First name"
             aria-label="First name"
             id="firstName"
+            name="firstName"
+            {...formik.getFieldProps("firstName")}
+            
           />
         </div>
         <div className="col-6">
@@ -44,6 +48,7 @@ const DetailsForm = ({ booking, onSubmit, setData }) => {
             placeholder="Last name"
             aria-label="Last name"
             id="lastName"
+            name="lastName"
           />
         </div>
         <div className="col-6">
@@ -56,10 +61,11 @@ const DetailsForm = ({ booking, onSubmit, setData }) => {
             placeholder="Phone Number"
             aria-label="Phone Number"
             id="phoneNumber"
+            name="phoneNumber"
           />
         </div>
         <div className="col-6">
-          <label htmlFor="lastName" className="form-label">
+          <label htmlFor="email" className="form-label">
             *Email
           </label>
           <input
@@ -80,6 +86,7 @@ const DetailsForm = ({ booking, onSubmit, setData }) => {
             placeholder="Add a Special Request(Optional)"
             aria-label="request"
             id="request"
+            name="request"
             rows="5"
           ></textarea>
         </div>
