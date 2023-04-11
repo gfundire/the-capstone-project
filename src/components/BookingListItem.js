@@ -1,16 +1,19 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from './Button';
 
 const BookingListItem = ({ children }) => {
   const navigate = useNavigate();
-  const goBack = () => navigate('/reservations/bookings');
+  const goBack = (e) => {
+    e.preventDefault();
+    navigate('/reservations/bookings');
+    console.log('navigating Back');
+  };
   return (
     <li className="list-group-item d-flex justify-content-between align-items-start">
       <div className="fw-bold ms-2 me-auto">{children}</div>
-      <Button className="btn-sm" onClick={goBack}>
+      <button className="btn btn-primary btn-sm" type="submit" onClick={goBack}>
         Edit
-      </Button>
+      </button>
     </li>
   );
 };

@@ -4,7 +4,7 @@ import ListItem from './BookingListItem';
 const BookingList = ({ booking }) => {
   const bookingValues = Object.values(booking);
   return (
-    <ul className="list-group">
+    <ul className="list-group container">
       {bookingValues.map(
         (item) => item !== '' && <ListItem key={item}>{item}</ListItem>
       )}

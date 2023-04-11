@@ -8,18 +8,17 @@ const DetailsForm = ({ booking, onSubmit, setData }) => {
     e.preventDefault();
     onSubmit();
   };
-  const bookingValues = Object()
+
   return (
     <>
       <Corousel />
-      <h1 className="text-center my-3 display-5">Your Reservation</h1>
-      <form className="row g-3 mb-5 px-5" onSubmit={handleSubmit}>
+      <section>
+        <h1 className="text-center my-3 display-5">Your Reservation</h1>
         <div>
-          {
-            booking&&<BookingList booking={booking} />
-          }
-          
+          <BookingList booking={booking} />
         </div>
+      </section>      
+      <form className="row g-3 mb-5 px-5" onSubmit={handleSubmit}>
         <div>
           <h2 className="text-center my-2 display-5">Personal Details</h2>
         </div>
