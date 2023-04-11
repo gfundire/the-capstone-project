@@ -24,6 +24,7 @@ const BookingForm = ({
             placeholder="Date"
             aria-label="Date"
             id="res_date"
+            name="res_date"
             value={booking.date}
             onChange={dispatch}
             required
@@ -35,6 +36,7 @@ const BookingForm = ({
           </label>
           <select
             id="res_time"
+            name="res_time"
             className="form-select"
             onChange={handleBookingData}
             required
@@ -56,6 +58,7 @@ const BookingForm = ({
             aria-label="Number of Guests"
             placeholder="1"
             id="guests"
+            name="guests"
             min="1"
             max="10"
             required
@@ -70,6 +73,7 @@ const BookingForm = ({
           </label>
           <select
             id="occasion"
+            name="occasion"
             required
             className="form-select"
             onChange={handleBookingData}
