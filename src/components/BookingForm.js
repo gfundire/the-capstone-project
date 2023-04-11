@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import './booking-form.css';
+import Corousel from './Corousel';
 
 const BookingForm = ({
   times,
@@ -12,6 +13,8 @@ const BookingForm = ({
 }) => {
   return (
     <>
+    <Corousel/>
+    <section>
       <h1 className="text-center my-5">Find a Table for Any Occasion</h1>
       <form className="row g-3 mb-5 px-5" onSubmit={handleSubmit}>
         <div className="col-12 col-md-6">
@@ -122,6 +125,7 @@ const BookingForm = ({
           </Button>
         </div>
       </form>
+      </section>
     </>
   );
 };

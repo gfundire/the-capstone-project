@@ -5,7 +5,7 @@ import './call-to-action.css';
 
 const CallToAction = () => {
   const navigate = useNavigate();
-  const handleClik = () => navigate('/bookings');
+  const handleClik = () => navigate('reservations/bookings');
   return (
     <section className="container my-5">
       <div className="row">

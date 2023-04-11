@@ -1,20 +1,24 @@
 import React from 'react';
 import Button from './Button';
 import BookingList from './BookingList';
+import Corousel from './Corousel';
 
-const DetailsForm = ({booking,onSubmit,setData}) => {  
-  const handleSubmit = (e)=>{
+const DetailsForm = ({ booking, onSubmit, setData }) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit();
   };
   return (
     <>
+      <Corousel />
       <h1 className="text-center my-3 display-5">Your Reservation</h1>
       <form className="row g-3 mb-5 px-5" onSubmit={handleSubmit}>
         <div>
-          <BookingList booking={booking}/>          
+          <BookingList booking={booking} />
         </div>
-        <div><h2 className="text-center my-2 display-5">Personal Details</h2></div>
+        <div>
+          <h2 className="text-center my-2 display-5">Personal Details</h2>
+        </div>
         <div className="col-6">
           <label htmlFor="firstName" className="form-label">
             *First Name
@@ -60,7 +64,7 @@ const DetailsForm = ({booking,onSubmit,setData}) => {
             className="form-control"
             placeholder="Email"
             aria-label="Email"
-            id="email"            
+            id="email"
           />
         </div>
 

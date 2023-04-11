@@ -1,9 +1,9 @@
 const siteLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about-us' },
-  { name: 'Reservations', path: '/bookings' },
-  { name: 'Confirmation', path: '/confirmation' },
-  { name: 'Order Online', path: '/order-online' },
+  { name: 'Reservations', path: '/reservations/bookings' },
+  { name: 'Confirmation', path: '/reservations/confirmation' },
+  { name: 'Order Online', path: '/reservations' },
   { name: 'Login', path: '/login' },
 ];
 
