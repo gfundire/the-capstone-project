@@ -4,9 +4,9 @@ import './confirmation.css';
 
 const ConfirmedBooking = () => {
   return (
-    <section>
+    <>
       <Corousel />
-      <article className="container success pt-5">
+      <section className="container success pt-5">
         <h1 className="my-5 text-center">
           Success!{' '}
           <span>
@@ -18,8 +18,8 @@ const ConfirmedBooking = () => {
           email address.
         </p>
         <p >Thank you for choosing us.</p>
-      </article>
-    </section>
+      </section>
+    </>
   );
 };
 

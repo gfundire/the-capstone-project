@@ -1,19 +1,13 @@
 import React from 'react';
-import Button from './Button';
+import ListItem from './BookingListItem';
+
 const BookingList = ({ booking }) => {
+  const bookingValues = Object.values(booking);
   return (
     <ul className="list-group">
-      {Object.values(booking).map((item) => {
-        return (
-          <li
-            className="list-group-item d-flex justify-content-between align-items-start"
-            key={item}
-          >
-            <div className="fw-bold ms-2 me-auto">{item}</div>
-            <Button className="btn-sm">Edit</Button>
-          </li>
-        );
-      })}
+      {bookingValues.map(
+        (item) => item !== '' && <ListItem key={item}>{item}</ListItem>
+      )}
     </ul>
   );
 };
