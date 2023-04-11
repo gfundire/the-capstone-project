@@ -91,11 +91,11 @@ const BookingForm = ({
             <input
               className="form-check-input"
               type="radio"
-              name="standard"
+              name="seatingOption"
               id="standard"
               value="Standard"
               checked={booking.seatingOption === 'Standard'}
-              onChange={handleOptionChange}
+              onChange={handleBookingData}
             />
             <label className="form-check-label" htmlFor="standard">
               Standard
@@ -105,11 +105,11 @@ const BookingForm = ({
             <input
               className="form-check-input"
               type="radio"
-              name="outside"
+              name="seatingOption"
               id="outside"
               value="Outside"
               checked={booking.seatingOption === 'Outside'}
-              onChange={handleOptionChange}
+              onChange={handleBookingData}
             />
             <label className="form-check-label" htmlFor="outside">
               Outside

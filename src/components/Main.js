@@ -8,23 +8,20 @@ import { fetchAPI, submitAPI } from '../utils/api';
 const Main = () => {
   const navigate = useNavigate();
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [bookingData, setBookingData] = React.useState({
+
+  const [bookingData, setBookingData] = useState({
     res_date: '',
     res_time: '',
     guests: '',
     occasion: '',
     seatingOption: '',
   });
-  const submitForm = (formData) => {
-    const result = submitAPI();
-    if (result) {
-      navigate('/confirmation');
-    }
-    return;
-  };
+
+  
   const handleBookingData = (e) => {
-    setBookingData({ ...bookingData, [e.target.id]: e.target.value });
+    setBookingData({ ...bookingData, [e.target.name]: e.target.value });
   };
+
   const initialState = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   const updateTimes = (state, action) => {
     if (action.type === 'change_date') {
@@ -39,16 +36,23 @@ const Main = () => {
     initialState,
     initializeTimes
   );
+  
   const handleDateChange = (e) => {
     dispatch({ type: 'change_date', date: e.target.value });
-    setBookingData({ ...bookingData, [e.target.id]: e.target.value });
+    setBookingData({ ...bookingData, [e.target.name]: e.target.value });
   };
-  const handleOptionChange = (e) => {
-    setBookingData({ ...bookingData, seatingOption: e.target.value });
-  };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormSubmitted(true);
+  };
+
+  const submitForm = (formData) => {
+    const result = submitAPI();
+    if (result) {
+      navigate('/confirmation');
+    }
+    return;
   };
 
   return (
@@ -68,8 +72,7 @@ const Main = () => {
               dispatch={handleDateChange}
               handleSubmit={handleSubmit}
               booking={bookingData}
-              handleBookingData={handleBookingData}
-              handleOptionChange={handleOptionChange}
+              handleBookingData={handleBookingData}              
             />
           )}
         </article>
