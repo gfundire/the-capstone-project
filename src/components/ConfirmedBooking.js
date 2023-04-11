@@ -10,7 +10,7 @@ const ConfirmedBooking = () => {
         <h1 className="my-5 text-center">
           Success!{' '}
           <span>
-            <i class="bi bi-check-circle"></i>
+            <i className="bi bi-check-circle"></i>
           </span>
         </h1>
         <p className="my-0">

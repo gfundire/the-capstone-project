@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import BookingList from './BookingList';
 
-const DetailsForm = ({booking,onSubmit}) => {  
+const DetailsForm = ({booking,onSubmit,setData}) => {  
   const handleSubmit = (e)=>{
     e.preventDefault();
     onSubmit();
@@ -60,7 +60,7 @@ const DetailsForm = ({booking,onSubmit}) => {
             className="form-control"
             placeholder="Email"
             aria-label="Email"
-            id="email"
+            id="email"            
           />
         </div>
 

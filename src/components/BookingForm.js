@@ -26,6 +26,7 @@ const BookingForm = ({
             id="res_date"
             value={booking.date}
             onChange={dispatch}
+            required
           />
         </div>
         <div className="col-12 col-md-6">
@@ -36,6 +37,7 @@ const BookingForm = ({
             id="res_time"
             className="form-select"
             onChange={handleBookingData}
+            required
           >
             {times.map((time) => (
               <option key={time} value={time}>
@@ -56,6 +58,7 @@ const BookingForm = ({
             id="guests"
             min="1"
             max="10"
+            required
             value={booking.guests}
             onChange={handleBookingData}
           />
@@ -67,6 +70,7 @@ const BookingForm = ({
           </label>
           <select
             id="occasion"
+            required
             className="form-select"
             onChange={handleBookingData}
           >

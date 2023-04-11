@@ -60,6 +60,7 @@ const Main = () => {
             <DetailsForm
               booking={bookingData}
               onSubmit={() => submitForm(bookingData)}
+              setData={setBookingData}
             />
           ) : (
             <BookingForm
