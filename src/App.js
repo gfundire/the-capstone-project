@@ -73,8 +73,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
-        <Route path="reservations">
-          <Route index element={<Corousel />} />
+        <Route path="reservations">          
           <Route
             path="bookings"
             element={
