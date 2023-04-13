@@ -3,12 +3,13 @@ import Button from './Button';
 import BookingList from './BookingList';
 import Corousel from './Corousel';
 
-const DetailsForm = ({ booking, onSubmit,  formik}) => {
-  
+const DetailsForm = ({ booking, onSubmit, formik }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit();
   };
+
+ console.log(formik.values);
 
   return (
     <>
@@ -18,7 +19,7 @@ const DetailsForm = ({ booking, onSubmit,  formik}) => {
         <div>
           <BookingList booking={booking} />
         </div>
-      </section>      
+      </section>
       <form className="row g-3 mb-5 px-5" onSubmit={handleSubmit}>
         <div>
           <h2 className="text-center my-2 display-5">Personal Details</h2>
@@ -34,8 +35,7 @@ const DetailsForm = ({ booking, onSubmit,  formik}) => {
             aria-label="First name"
             id="firstName"
             name="firstName"
-            {...formik.getFieldProps("firstName")}
-            
+            {...formik.getFieldProps('firstName')}
           />
         </div>
         <div className="col-6">
@@ -49,7 +49,7 @@ const DetailsForm = ({ booking, onSubmit,  formik}) => {
             aria-label="Last name"
             id="lastName"
             name="lastName"
-            {...formik.getFieldProps("lastName")}
+            {...formik.getFieldProps('lastName')}
           />
         </div>
         <div className="col-6">
@@ -63,7 +63,7 @@ const DetailsForm = ({ booking, onSubmit,  formik}) => {
             aria-label="Phone Number"
             id="phoneNumber"
             name="phoneNumber"
-            {...formik.getFieldProps("phoneNumber")}
+            {...formik.getFieldProps('phoneNumber')}
           />
         </div>
         <div className="col-6">
@@ -77,7 +77,7 @@ const DetailsForm = ({ booking, onSubmit,  formik}) => {
             aria-label="Email"
             id="email"
             name="email"
-            {...formik.getFieldProps("email")}
+            {...formik.getFieldProps('email')}
           />
         </div>
 
@@ -91,7 +91,7 @@ const DetailsForm = ({ booking, onSubmit,  formik}) => {
             aria-label="request"
             id="request"
             name="request"
-            {...formik.getFieldProps("request")}
+            {...formik.getFieldProps('request')}
             rows="5"
           ></textarea>
         </div>
