@@ -11,14 +11,14 @@ const DetailsForm = ({ booking, onSubmit, formik }) => {
   };
 
   const { errors, values, touched, getFieldProps } = formik;
-
+  const { res_date, res_time, guests, occasion, seatingOption } = values;
   return (
     <>
       <Corousel />
       <section>
         <h1 className="text-center my-3 display-5">Your Reservation</h1>
         <div>
-          <BookingList booking={booking} />
+          <BookingList booking={values} />
         </div>
       </section>
       <form className="row g-3 mb-5 px-5" onSubmit={handleSubmit}>
@@ -39,8 +39,8 @@ const DetailsForm = ({ booking, onSubmit, formik }) => {
             {...getFieldProps('firstName')}
           />
           {errors.firstName && touched.firstName && (
-              <Error>{errors.firstName}</Error>
-            )}
+            <Error>{errors.firstName}</Error>
+          )}
         </div>
         <div className="col-6">
           <label htmlFor="lastName" className="form-label">
@@ -56,8 +56,8 @@ const DetailsForm = ({ booking, onSubmit, formik }) => {
             {...getFieldProps('lastName')}
           />
           {errors.lastName && touched.lastName && (
-              <Error>{errors.lastName}</Error>
-            )}
+            <Error>{errors.lastName}</Error>
+          )}
         </div>
         <div className="col-6">
           <label htmlFor="phoneNumber" className="form-label">
@@ -73,8 +73,8 @@ const DetailsForm = ({ booking, onSubmit, formik }) => {
             {...getFieldProps('phoneNumber')}
           />
           {errors.phoneNumber && touched.phoneNumber && (
-              <Error>{errors.phoneNumber}</Error>
-            )}
+            <Error>{errors.phoneNumber}</Error>
+          )}
         </div>
         <div className="col-6">
           <label htmlFor="email" className="form-label">
@@ -89,9 +89,7 @@ const DetailsForm = ({ booking, onSubmit, formik }) => {
             name="email"
             {...getFieldProps('email')}
           />
-          {errors.email && touched.email && (
-              <Error>{errors.email}</Error>
-            )}
+          {errors.email && touched.email && <Error>{errors.email}</Error>}
         </div>
 
         <div className="col-12 mt-4">
