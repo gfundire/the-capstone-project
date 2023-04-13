@@ -13,7 +13,7 @@ const BookingForm = ({
   formik
 }) => {
 
-  console.log(formik.values);
+  console.log("Option :",formik.values.seatingOption);
   return (
     <>
       <section>
@@ -107,10 +107,12 @@ const BookingForm = ({
                 type="radio"
                 name="seatingOption"
                 id="standard"
-                value="Standard"
-                checked={booking.seatingOption === 'Standard'}
-                onChange={handleBookingData}
                 {...formik.getFieldProps('seatingOption')}
+                value="Standard"
+                // checked={booking.seatingOption === 'Standard'}
+                checked={formik.values.seatingOption === 'Standard'}
+                // onChange={handleBookingData}
+                
               />
               <label className="form-check-label" htmlFor="standard">
                 Standard
@@ -122,10 +124,12 @@ const BookingForm = ({
                 type="radio"
                 name="seatingOption"
                 id="outside"
-                value="Outside"
-                checked={booking.seatingOption === 'Outside'}
-                onChange={handleBookingData}
                 {...formik.getFieldProps('seatingOption')}
+                value="Outside"
+                checked={formik.values.seatingOption === 'Outside'}
+                // checked={booking.seatingOption === 'Outside'}
+                // onChange={handleBookingData}
+                
               />
               <label className="form-check-label" htmlFor="outside">
                 Outside
