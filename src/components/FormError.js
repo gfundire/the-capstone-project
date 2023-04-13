@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import './error.css';
 
-const FormError = ({children})=>{
-  return <div>{children}</div> 
-}
+const FormError = ({ children }) => {
+  return <div className="error">{children}</div>;
+};
 
 export default FormError;
