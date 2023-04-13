@@ -49,6 +49,7 @@ const DetailsForm = ({ booking, onSubmit,  formik}) => {
             aria-label="Last name"
             id="lastName"
             name="lastName"
+            {...formik.getFieldProps("lastName")}
           />
         </div>
         <div className="col-6">
@@ -62,6 +63,7 @@ const DetailsForm = ({ booking, onSubmit,  formik}) => {
             aria-label="Phone Number"
             id="phoneNumber"
             name="phoneNumber"
+            {...formik.getFieldProps("phoneNumber")}
           />
         </div>
         <div className="col-6">
@@ -74,6 +76,8 @@ const DetailsForm = ({ booking, onSubmit,  formik}) => {
             placeholder="Email"
             aria-label="Email"
             id="email"
+            name="email"
+            {...formik.getFieldProps("email")}
           />
         </div>
 
@@ -87,6 +91,7 @@ const DetailsForm = ({ booking, onSubmit,  formik}) => {
             aria-label="request"
             id="request"
             name="request"
+            {...formik.getFieldProps("request")}
             rows="5"
           ></textarea>
         </div>

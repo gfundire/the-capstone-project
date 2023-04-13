@@ -15,12 +15,13 @@ import Error404 from './components/Error404';
 import Login from './components/Login';
 import Footer from './components/Footer';
 
+import useBooking from './hooks/useBookings';
 import { fetchAPI, submitAPI } from './utils/api';
 
 export default function App() {
   const navigate = useNavigate();
   const [formSubmitted, setFormSubmitted] = useState(false);
-
+  const { formik } = useBooking();
   const [bookingData, setBookingData] = useState({
     res_date: '',
     res_time: '',
@@ -73,7 +74,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
-        <Route path="/reservations">          
+        <Route path="/reservations">
           <Route
             path="bookings"
             element={
@@ -93,6 +94,7 @@ export default function App() {
                 booking={bookingData}
                 onSubmit={() => submitForm(bookingData)}
                 setData={setBookingData}
+                formik={formik}
               />
             }
           />
