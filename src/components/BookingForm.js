@@ -10,7 +10,10 @@ const BookingForm = ({
   booking,
   handleBookingData,
   handleOptionChange,
+  formik
 }) => {
+
+  console.log(formik.values);
   return (
     <>
       <section>
@@ -32,6 +35,7 @@ const BookingForm = ({
               name="res_date"
               value={booking.res_date}
               onChange={dispatch}
+              {...formik.getFieldProps('res_date')}
               required
             />
           </div>
@@ -45,6 +49,7 @@ const BookingForm = ({
               className="form-select"
               value={booking.res_time}
               onChange={handleBookingData}
+              {...formik.getFieldProps('res_time')}
               required
             >
               {times.map((time) => (
@@ -70,6 +75,7 @@ const BookingForm = ({
               required
               value={booking.guests}
               onChange={handleBookingData}
+              {...formik.getFieldProps('guests')}
             />
           </div>
 
@@ -84,6 +90,7 @@ const BookingForm = ({
               required
               className="form-select"
               onChange={handleBookingData}
+              {...formik.getFieldProps('occasion')}
             >
               {['', 'Birthday', 'Engagement', 'Anniversary'].map((event) => (
                 <option key={event} value={event}>
@@ -103,6 +110,7 @@ const BookingForm = ({
                 value="Standard"
                 checked={booking.seatingOption === 'Standard'}
                 onChange={handleBookingData}
+                {...formik.getFieldProps('seatingOption')}
               />
               <label className="form-check-label" htmlFor="standard">
                 Standard
@@ -117,6 +125,7 @@ const BookingForm = ({
                 value="Outside"
                 checked={booking.seatingOption === 'Outside'}
                 onChange={handleBookingData}
+                {...formik.getFieldProps('seatingOption')}
               />
               <label className="form-check-label" htmlFor="outside">
                 Outside

@@ -10,7 +10,7 @@ export default function useBooking() {
       seatingOption: '',
       firstName: '',
       lastName: '',
-      phone: '',
+      phoneNumber: '',
       email: '',
       request: '',
     },
