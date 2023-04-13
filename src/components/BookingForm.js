@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './Button';
 import './booking-form.css';
 import Corousel from './Corousel';
+import Error from './FormError';
 
 const BookingForm = ({
   times,
@@ -11,7 +12,7 @@ const BookingForm = ({
   handleBookingData,
   formik,
 }) => {
-  console.log( formik.values);
+  const{errors,values,touched,getFieldProps} = formik;
   return (
     <>
       <section>
@@ -33,9 +34,10 @@ const BookingForm = ({
               name="res_date"
               value={booking.res_date}
               onChange={dispatch}
-              {...formik.getFieldProps('res_date')}
+              {...getFieldProps('res_date')}
               required
             />
+            {errors.res_date&&touched.res_date&&<Error>{errors.res_date}</Error>}
           </div>
           <div className="col-12 col-md-6">
             <label htmlFor="res_time" className="form-label">
@@ -47,7 +49,7 @@ const BookingForm = ({
               className="form-select"
               value={booking.res_time}
               onChange={handleBookingData}
-              {...formik.getFieldProps('res_time')}
+              {...getFieldProps('res_time')}
               required
             >
               {times.map((time) => (
@@ -56,6 +58,7 @@ const BookingForm = ({
                 </option>
               ))}
             </select>
+            {errors.res_time&&touched.res_time&&<Error>{errors.res_time}</Error>}
           </div>
           <div className="col-12 col-md-6">
             <label htmlFor="guests" className="form-label">
@@ -73,8 +76,9 @@ const BookingForm = ({
               required
               value={booking.guests}
               onChange={handleBookingData}
-              {...formik.getFieldProps('guests')}
+              {...getFieldProps('guests')}
             />
+             {errors.guests&&touched.guests&&<Error>{errors.guests}</Error>}
           </div>
 
           <div className="col-12 col-md-6">
@@ -88,7 +92,7 @@ const BookingForm = ({
               required
               className="form-select"
               onChange={handleBookingData}
-              {...formik.getFieldProps('occasion')}
+              {...getFieldProps('occasion')}
             >
               {['', 'Birthday', 'Engagement', 'Anniversary'].map((event) => (
                 <option key={event} value={event}>
@@ -96,6 +100,7 @@ const BookingForm = ({
                 </option>
               ))}
             </select>
+            {errors.occasion&&touched.occasion&&<Error>{errors.occasion}</Error>}
           </div>
           <div className="col-12">
             <h5>Seating Options</h5>
@@ -105,15 +110,16 @@ const BookingForm = ({
                 type="radio"
                 name="seatingOption"
                 id="standard"
-                {...formik.getFieldProps('seatingOption')}
+                {...getFieldProps('seatingOption')}
                 value="Standard"
                 // checked={booking.seatingOption === 'Standard'}
-                checked={formik.values.seatingOption === 'Standard'}
+                checked={values.seatingOption === 'Standard'}
                 // onChange={handleBookingData}
               />
               <label className="form-check-label" htmlFor="standard">
                 Standard
               </label>
+              {errors.seatingOption&&touched.seatingOption&&<Error>{errors.seatingOption}</Error>}
             </div>
             <div className="form-check">
               <input
@@ -121,15 +127,16 @@ const BookingForm = ({
                 type="radio"
                 name="seatingOption"
                 id="outside"
-                {...formik.getFieldProps('seatingOption')}
+                {...getFieldProps('seatingOption')}
                 value="Outside"
-                checked={formik.values.seatingOption === 'Outside'}
+                checked={values.seatingOption === 'Outside'}
                 // checked={booking.seatingOption === 'Outside'}
                 // onChange={handleBookingData}
               />
               <label className="form-check-label" htmlFor="outside">
                 Outside
               </label>
+              {errors.seatingOption&&touched.seatingOption&&<Error>{errors.seatingOption}</Error>}
             </div>
           </div>
           <div className="co1-12">
