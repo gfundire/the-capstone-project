@@ -13,6 +13,12 @@ const BookingForm = ({
   formik,
 }) => {
   const { errors, values, touched, getFieldProps } = formik;
+  const bookingValues = Object.values(booking);
+  const empty = (currentValue) => currentValue === '';
+  const bookingFieldValues = Object.values(bookingValues);
+  const someFieldsEmpty = ()=> bookingFieldValues.some(empty);
+  someFieldsEmpty()
+
   return (
     <>
       <section>
@@ -139,7 +145,7 @@ const BookingForm = ({
                 value="Outside"
                 // checked={values.seatingOption === 'Outside'}
                 checked={booking.seatingOption === 'Outside'}
-                onChange={handleBookingData}
+                onChange={handleBookingData}                
               />
               <label className="form-check-label" htmlFor="outside">
                 Outside
@@ -150,9 +156,9 @@ const BookingForm = ({
             </div>
           </div>
           <div className="co1-12">
-            <Button type="submit" className="btn-lg btn-block col-12">
+            <button type="submit" disabled={someFieldsEmpty} className="btn btn-primary btn-lg btn-block col-12">
               Make Your Reservation
-            </Button>
+            </button>
           </div>
         </form>
       </section>

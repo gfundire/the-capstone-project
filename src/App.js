@@ -54,13 +54,14 @@ export default function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Submitted! ",bookingData);
     navigate('/reservations/details');
   };
 
   const submitForm = (formData) => {
     const result = submitAPI();
     if (result) {
-      navigate('/reservations/confirmation');
+      navigate('/reservations/confirmation');      
     }
     return;
   };
@@ -81,7 +82,7 @@ export default function App() {
                 handleSubmit={handleSubmit}
                 booking={bookingData}
                 handleBookingData={handleBookingData}
-                // formik={formik}
+                formik={formik}
               />
             }
           />

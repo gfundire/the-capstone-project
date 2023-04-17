@@ -4,23 +4,13 @@ import BookingList from './BookingList';
 import Corousel from './Corousel';
 import Error from './FormError';
 
-const DetailsForm = ({ onSubmit, formik }) => {
+const DetailsForm = ({ onSubmit, formik,booking }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit();
   };
 
-  const { errors, values, touched, getFieldProps } = formik;
-  const { res_date, res_time, guests, occasion, seatingOption } = values;
-
-  const booking = {
-    res_date,
-    res_time,
-    guests,
-    occasion,
-    seatingOption,
-  };
-
+  const { errors, touched, getFieldProps } = formik;  
   return (
     <>
       <Corousel />
