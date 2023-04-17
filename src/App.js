@@ -20,6 +20,7 @@ import { fetchAPI, submitAPI } from './utils/api';
 export default function App() {
   const navigate = useNavigate();
   const { formik } = useBooking();
+
   const initialFormValues = {
     res_date: '',
     res_time: '1700',
@@ -27,13 +28,11 @@ export default function App() {
     occasion: '',
     seatingOption: '',
   };
+
   const [bookingData, setBookingData] = useState(initialFormValues);
 
-  const handleBookingData = (e) => {
-    setBookingData({ ...bookingData, [e.target.name]: e.target.value });
-  };
-
   const initialTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+
   const updateTimes = (state, action) => {
     if (action.type === 'change_date') {
       const date = new Date(action.date);
@@ -53,9 +52,22 @@ export default function App() {
     setBookingData({ ...bookingData, [e.target.name]: e.target.value });
   };
 
+  const handleBookingData = (e) => {
+    setBookingData({ ...bookingData, [e.target.name]: e.target.value });
+  };
+
+  const validateForm = () => {
+    const bookingValues = Object.values(bookingData);
+    const empty = (currentValue) => currentValue === '';
+    const bookingFieldValues = Object.values(bookingValues);
+    return !bookingFieldValues.some(empty);
+  };
+
+  const isFormValid = validateForm();
+
   const submitForm = (formData) => {
     const result = submitAPI(formData);
-    if (result) {
+    if (isFormValid && result) {
       setBookingData({ ...initialFormValues });
       navigate('/reservations/confirmation');
     }
@@ -64,7 +76,6 @@ export default function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // navigate('/reservations/details');
     submitForm(bookingData);
   };
 
