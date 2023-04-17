@@ -4,17 +4,16 @@ import BookingList from './BookingList';
 import Corousel from './Corousel';
 import Error from './FormError';
 
-const DetailsForm = ({ onSubmit, formik,booking }) => {
+const DetailsForm = ({ onSubmit, formik, booking }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit();
   };
 
-  const { errors, touched, getFieldProps } = formik;  
+  const { errors, touched, getFieldProps } = formik;
   return (
     <>
       <Corousel />
-      
       <section>
         <BookingList booking={booking} />
       </section>
@@ -68,7 +67,7 @@ const DetailsForm = ({ onSubmit, formik,booking }) => {
             aria-label="Phone Number"
             id="phoneNumber"
             name="phoneNumber"
-            pattern="[+]{1}[0-9]{11,14}"
+            // pattern="[+]{1}[0-9]{11,14}"
             {...getFieldProps('phoneNumber')}
           />
           {errors.phoneNumber && touched.phoneNumber && (

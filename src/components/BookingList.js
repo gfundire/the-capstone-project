@@ -4,8 +4,6 @@ import ListItem from './BookingListItem';
 const BookingList = ({ booking }) => {
   const bookingValues = Object.values(booking);
   const stringEmpty = (currentValue) => currentValue === '';
-  console.log("From BookingList",booking);
-
   if (!bookingValues.some(stringEmpty)) {
     return (
       <>

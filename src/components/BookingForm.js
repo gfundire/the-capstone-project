@@ -16,11 +16,7 @@ const BookingForm = ({
   const bookingValues = Object.values(booking);
   const empty = (currentValue) => currentValue === '';
   const bookingFieldValues = Object.values(bookingValues);
-  const someFieldsEmpty = ()=>{
-    console.log(bookingFieldValues.some(empty));
-   return bookingFieldValues.some(empty);
-  } 
-  someFieldsEmpty()
+  const someFieldsEmpty = () => bookingFieldValues.some(empty);
 
   return (
     <>
@@ -148,7 +144,7 @@ const BookingForm = ({
                 value="Outside"
                 // checked={values.seatingOption === 'Outside'}
                 checked={booking.seatingOption === 'Outside'}
-                onChange={handleBookingData}                
+                onChange={handleBookingData}
               />
               <label className="form-check-label" htmlFor="outside">
                 Outside
@@ -159,7 +155,11 @@ const BookingForm = ({
             </div>
           </div>
           <div className="co1-12">
-            <button type="submit" disabled={someFieldsEmpty()} className="btn btn-primary btn-lg btn-block col-12">
+            <button
+              type="submit"
+              disabled={someFieldsEmpty()}
+              className="btn btn-primary btn-lg btn-block col-12"
+            >
               Make Your Reservation
             </button>
           </div>
