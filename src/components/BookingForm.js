@@ -18,7 +18,7 @@ const BookingForm = ({
   const bookingFieldValues = Object.values(bookingValues);
   const someFieldsEmpty = ()=>{
     console.log(bookingFieldValues.some(empty));
-    bookingFieldValues.some(empty);
+   return bookingFieldValues.some(empty);
   } 
   someFieldsEmpty()
 
