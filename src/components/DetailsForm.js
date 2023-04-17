@@ -78,6 +78,7 @@ const DetailsForm = ({ onSubmit, formik }) => {
             aria-label="Phone Number"
             id="phoneNumber"
             name="phoneNumber"
+            pattern="[+]{1}[0-9]{11,14}"
             {...getFieldProps('phoneNumber')}
           />
           {errors.phoneNumber && touched.phoneNumber && (
