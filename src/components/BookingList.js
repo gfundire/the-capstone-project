@@ -19,7 +19,7 @@ const BookingList = ({ booking }) => {
       </>
     );
   }
-  return <div>Fields still empty</div>
+  return;
 };
 
 export default BookingList;

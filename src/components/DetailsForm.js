@@ -64,7 +64,7 @@ const DetailsForm = ({ onSubmit, formik,booking }) => {
           <input
             type="tel"
             className="form-control"
-            placeholder="Phone Number"
+            placeholder="+263..."
             aria-label="Phone Number"
             id="phoneNumber"
             name="phoneNumber"

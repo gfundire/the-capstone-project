@@ -16,7 +16,10 @@ const BookingForm = ({
   const bookingValues = Object.values(booking);
   const empty = (currentValue) => currentValue === '';
   const bookingFieldValues = Object.values(bookingValues);
-  const someFieldsEmpty = ()=> bookingFieldValues.some(empty);
+  const someFieldsEmpty = ()=>{
+    console.log(bookingFieldValues.some(empty));
+    bookingFieldValues.some(empty);
+  } 
   someFieldsEmpty()
 
   return (
@@ -156,7 +159,7 @@ const BookingForm = ({
             </div>
           </div>
           <div className="co1-12">
-            <button type="submit" disabled={someFieldsEmpty} className="btn btn-primary btn-lg btn-block col-12">
+            <button type="submit" disabled={someFieldsEmpty()} className="btn btn-primary btn-lg btn-block col-12">
               Make Your Reservation
             </button>
           </div>
