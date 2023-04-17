@@ -7,7 +7,6 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import About from './components/About';
 import BookingForm from './components/BookingForm';
-import Corousel from './components/Corousel';
 import DetailsForm from './components/DetailsForm';
 import ConfirmedBooking from './components/ConfirmedBooking';
 import Orders from './components/Orders';
@@ -20,7 +19,6 @@ import { fetchAPI, submitAPI } from './utils/api';
 
 export default function App() {
   const navigate = useNavigate();
-  const [formSubmitted, setFormSubmitted] = useState(false);
   const { formik } = useBooking();
   const [bookingData, setBookingData] = useState({
     res_date: '',
@@ -57,7 +55,6 @@ export default function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate('/reservations/details');
-    setFormSubmitted(true);
   };
 
   const submitForm = (formData) => {
@@ -84,7 +81,7 @@ export default function App() {
                 handleSubmit={handleSubmit}
                 booking={bookingData}
                 handleBookingData={handleBookingData}
-                formik={formik}
+                // formik={formik}
               />
             }
           />

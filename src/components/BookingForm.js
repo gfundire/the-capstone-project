@@ -34,7 +34,7 @@ const BookingForm = ({
               name="res_date"
               value={booking.res_date}
               onChange={dispatch}
-              {...getFieldProps('res_date')}
+              // {...getFieldProps('res_date')}
               required
             />
             {errors.res_date && touched.res_date && (
@@ -51,7 +51,7 @@ const BookingForm = ({
               className="form-select"
               value={booking.res_time}
               onChange={handleBookingData}
-              {...getFieldProps('res_time')}
+              // {...getFieldProps('res_time')}
               required
             >
               {times.map((time) => (
@@ -80,7 +80,7 @@ const BookingForm = ({
               required
               value={booking.guests}
               onChange={handleBookingData}
-              {...getFieldProps('guests')}
+              // {...getFieldProps('guests')}
             />
             {errors.guests && touched.guests && <Error>{errors.guests}</Error>}
           </div>
@@ -96,7 +96,7 @@ const BookingForm = ({
               required
               className="form-select"
               onChange={handleBookingData}
-              {...getFieldProps('occasion')}
+              // {...getFieldProps('occasion')}
             >
               {['', 'Birthday', 'Engagement', 'Anniversary'].map((event) => (
                 <option key={event} value={event}>
@@ -116,11 +116,11 @@ const BookingForm = ({
                 type="radio"
                 name="seatingOption"
                 id="standard"
-                {...getFieldProps('seatingOption')}
+                // {...getFieldProps('seatingOption')}
                 value="Standard"
-                // checked={booking.seatingOption === 'Standard'}
-                checked={values.seatingOption === 'Standard'}
-                // onChange={handleBookingData}
+                checked={booking.seatingOption === 'Standard'}
+                // checked={values.seatingOption === 'Standard'}
+                onChange={handleBookingData}
               />
               <label className="form-check-label" htmlFor="standard">
                 Standard
@@ -135,11 +135,11 @@ const BookingForm = ({
                 type="radio"
                 name="seatingOption"
                 id="outside"
-                {...getFieldProps('seatingOption')}
+                // {...getFieldProps('seatingOption')}
                 value="Outside"
-                checked={values.seatingOption === 'Outside'}
-                // checked={booking.seatingOption === 'Outside'}
-                // onChange={handleBookingData}
+                // checked={values.seatingOption === 'Outside'}
+                checked={booking.seatingOption === 'Outside'}
+                onChange={handleBookingData}
               />
               <label className="form-check-label" htmlFor="outside">
                 Outside
