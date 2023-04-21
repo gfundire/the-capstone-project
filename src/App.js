@@ -95,6 +95,7 @@ export default function App() {
                 handleSubmit={handleSubmit}
                 booking={bookingData}
                 handleBookingData={handleBookingData}
+                validateForm={validateForm}
                 // formik={formik}
               />
             }

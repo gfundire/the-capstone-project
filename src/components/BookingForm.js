@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import './booking-form.css';
 import Corousel from './Corousel';
-import Error from './FormError';
+// import Error from './FormError';
 
 const BookingForm = ({
   times,
@@ -10,10 +10,12 @@ const BookingForm = ({
   handleSubmit,
   booking,
   handleBookingData,
+  validateForm
   // formik,
 }) => {
   // const { errors, values, touched, getFieldProps } = formik;
 
+  const formValid = validateForm();
   return (
     <>
       <section>
@@ -156,6 +158,7 @@ const BookingForm = ({
             <button
               type="submit"             
               className="btn btn-primary btn-lg btn-block col-12"
+              disabled={!formValid()}
             >
               Make Your Reservation
             </button>
