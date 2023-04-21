@@ -10,11 +10,9 @@ const BookingForm = ({
   handleSubmit,
   booking,
   handleBookingData,
-  formik,
+  // formik,
 }) => {
-  const { errors, values, touched, getFieldProps } = formik;  
-
-  
+  // const { errors, values, touched, getFieldProps } = formik;
 
   return (
     <>
@@ -40,9 +38,9 @@ const BookingForm = ({
               // {...getFieldProps('res_date')}
               required
             />
-            {errors.res_date && touched.res_date && (
+            {/* {errors.res_date && touched.res_date && (
               <Error>{errors.res_date}</Error>
-            )}
+            )} */}
           </div>
           <div className="col-12 col-md-6">
             <label htmlFor="res_time" className="form-label">
@@ -63,9 +61,9 @@ const BookingForm = ({
                 </option>
               ))}
             </select>
-            {errors.res_time && touched.res_time && (
+            {/* {errors.res_time && touched.res_time && (
               <Error>{errors.res_time}</Error>
-            )}
+            )} */}
           </div>
           <div className="col-12 col-md-6">
             <label htmlFor="guests" className="form-label">
@@ -85,7 +83,7 @@ const BookingForm = ({
               onChange={handleBookingData}
               // {...getFieldProps('guests')}
             />
-            {errors.guests && touched.guests && <Error>{errors.guests}</Error>}
+            {/* {errors.guests && touched.guests && <Error>{errors.guests}</Error>} */}
           </div>
 
           <div className="col-12 col-md-6">
@@ -107,9 +105,9 @@ const BookingForm = ({
                 </option>
               ))}
             </select>
-            {errors.occasion && touched.occasion && (
+            {/* {errors.occasion && touched.occasion && (
               <Error>{errors.occasion}</Error>
-            )}
+            )} */}
           </div>
           <div className="col-12">
             <h5>Seating Options</h5>
@@ -129,9 +127,9 @@ const BookingForm = ({
               <label className="form-check-label" htmlFor="standard">
                 Standard
               </label>
-              {errors.seatingOption && touched.seatingOption && (
+              {/* {errors.seatingOption && touched.seatingOption && (
                 <Error>{errors.seatingOption}</Error>
-              )}
+              )} */}
             </div>
             <div className="form-check">
               <input
@@ -149,9 +147,9 @@ const BookingForm = ({
               <label className="form-check-label" htmlFor="outside">
                 Outside
               </label>
-              {errors.seatingOption && touched.seatingOption && (
+              {/* {errors.seatingOption && touched.seatingOption && (
                 <Error>{errors.seatingOption}</Error>
-              )}
+              )} */}
             </div>
           </div>
           <div className="co1-12">

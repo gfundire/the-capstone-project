@@ -1,12 +1,21 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import BookingForm from '.components/BookingForm.js';
-import { fetchAPI } from './utils/api';
+import { fetchAPI,submitAPI } from './utils/api';
 
 describe('Booking Form', () => {
   test('Renders the BookingForm heading', () => {
     const times = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
 
     const dispatch = jest.fn();
+    const handleSubmit = jest.f()
+    const booking =  {
+      res_date: '',
+      res_time: '',
+      guests: '',
+      occasion: '',
+      seatingOption: '',
+    };
+    const handleBookingData = jest.fn();
 
     render(<BookingForm times={times} dispatch={dispatch} />);
 
@@ -32,6 +41,7 @@ describe('Booking Form', () => {
   // });
 
   test('UpdateTimes function returns different value than is provided in the state', () => {
+
     const times = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
     const date = new Date('04/21/2023');
     const updateTimes = jest.fn(() => fetchAPI(date));
