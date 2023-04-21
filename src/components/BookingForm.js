@@ -158,7 +158,7 @@ const BookingForm = ({
             <button
               type="submit"             
               className="btn btn-primary btn-lg btn-block col-12"
-              disabled={!formValid()}
+              disabled={!formValid}
             >
               Make Your Reservation
             </button>

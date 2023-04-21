@@ -55,7 +55,7 @@ describe('Booking Form', () => {
     const dispatch = jest.fn();
     const handleSubmit = jest.f();
     const handleBookingData = jest.fn();
-    const validateForm = jest.fn()
+    const validateForm = jest.fn();
     const booking = {
       res_date: '',
       res_time: '',
@@ -98,7 +98,7 @@ describe('Booking Form', () => {
     expect(validate()).toBe(true);
   });
 
-  test('Validate function returns false', () => {
+  test('Form Submission Is Disabled When form fields are empty', () => {
     const bookingData = {
       res_date: '',
       res_time: '1700',
@@ -120,7 +120,7 @@ describe('Booking Form', () => {
     const dispatch = jest.fn();
     const handleSubmit = jest.f();
     const handleBookingData = jest.fn();
-    const validateForm = jest.fn()
+    const validateForm = jest.fn();
     render(
       <BookingForm
         times={times}
@@ -130,7 +130,7 @@ describe('Booking Form', () => {
         handleBookingData={handleBookingData}
         validateForm={validateForm}
       />
-    ); 
+    );
 
     const validate = jest.fn(() => validateForm());
     expect(validate()).toBe(false);
