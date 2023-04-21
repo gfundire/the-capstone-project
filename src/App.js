@@ -23,7 +23,7 @@ export default function App() {
 
   const initialFormValues = {
     res_date: '',
-    res_time: '1700',
+    res_time: '',
     guests: '',
     occasion: '',
     seatingOption: '',
