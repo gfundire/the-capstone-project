@@ -7,3 +7,14 @@
 .about{
   background-color: #EE9972;
 }
+
+h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 64pt;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 40pt;
+}

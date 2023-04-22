@@ -10,7 +10,7 @@ const Testimonials = () => {
     return (
       <section className="testimonials">
         <div className="container">
-          <h3 className="text-center">Testimonials</h3>
+          <h3 className="text-center section-title">Testimonials</h3>
           <div className="row pt-5">
             {profiles.map((p) => (
               <Profile

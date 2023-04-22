@@ -10,7 +10,7 @@ const Specials = () => {
       <div className="container">
         <div className="row my-3">
           <div className="col-8">
-            <h2>This week's Specials</h2>
+            <h2 className="section-title">This week's Specials</h2>
           </div>
           <div className="col-4">
             <Button className="float-end">Online Menu</Button>

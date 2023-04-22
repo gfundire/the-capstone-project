@@ -5,7 +5,8 @@
   --green-primary: #495e57;
 }
 
-h1,h2{
+h1,
+h2 {
   margin: 0;
 }
 
@@ -29,4 +30,31 @@ main {
 
 .round {
   border-radius: 16pt;
+}
+
+.section-title {
+  font-family: 'Karla', serif;
+  font-size: 20pt;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Karla', serif;
+  font-size: 16pt;
+  font-weight: 400;
+  color: #495e57;
+  line-height: 1.5;
+}
+
+p.lead-text {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 18pt;
+}
+
+.card-title {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 18pt;
 }
