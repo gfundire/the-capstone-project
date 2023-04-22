@@ -20,3 +20,18 @@ button{
 .bg-primary{
   background-color:#F4CE14 ;
 }
+
+p.lead-text{
+  font-family: 'Karla', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18pt;  
+}
+
+h1{
+  font-family: 'Markazi Text', serif;
+  font-size: 64pt;
+}
+
+h2{
+  font-family: 'Markazi Text', serif;
+  font-size: 40pt;
+}
