@@ -17,7 +17,7 @@ const CallToAction = () => {
             traditional recipes served with a modern twist.
           </p>
           <div>
-            <button className="btn btn-primary" onClick={handleClik}>Reserve a Table</button>
+            <button className="btn btn-primary" aria-label="On Click" onClick={handleClik}>Reserve a Table</button>
           </div>
         </div>
         <div className="col-sm-6  mb-3">
