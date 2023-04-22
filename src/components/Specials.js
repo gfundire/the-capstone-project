@@ -9,10 +9,10 @@ const Specials = () => {
     <section className="specials pt-5 w-100">
       <div className="container">
         <div className="row my-3">
-          <div className="col">
+          <div className="col-8">
             <h2>This week's Specials</h2>
           </div>
-          <div className="col">
+          <div className="col-4">
             <Button className="float-end">Online Menu</Button>
           </div>
         </div>
