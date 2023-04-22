@@ -3,7 +3,7 @@ import "./about.css";
 
 const About = () => {
   return (
-    <section className="row mb-5">
+    <section className="row py-5">
       <article className="col-md-6 about-section">
         <p>
           Little Lemon is a charming neighbourhood bistro that serves a simple

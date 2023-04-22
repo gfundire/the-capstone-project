@@ -6,7 +6,7 @@ import About from './About';
 
 const Home = () => {
   return (
-    <main className="container">
+    <main>
       <CallToAction />
       <Specials />
       <Testimonials />
