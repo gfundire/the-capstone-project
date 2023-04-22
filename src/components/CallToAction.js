@@ -11,8 +11,8 @@ const CallToAction = () => {
       <div className="row">
         <div className="col-sm-6 hero-text mb-3">
           <h1 className="color-primary">Little Lemon</h1>
-          <h2 className="color-primary">Chicago</h2>
-          <p>
+          <h2 className="text-white">Chicago</h2>
+          <p className="text-white">
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
