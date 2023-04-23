@@ -3,12 +3,12 @@ import './about.css';
 
 const About = () => {
   return (
-    <section className="about py-5">
-      <div className="container">
-        <div className="row">
+    <section className="about p-5 row">
+      {/* <div className="container"> */}
+        {/* <div className="px-5 row"> */}
           <article className="col-md-6 about-section">
-            <h3 className="text-white">Little Lemon</h3>
-            <h4 className="text-white mb-5">Chicago</h4>
+            <h3 className="text-white display-title">Little Lemon</h3>
+            <h4 className="text-white mb-5 sub-title">Chicago</h4>
             <p>
               Little Lemon is a charming neighbourhood bistro that serves a
               simple food and classic cocktails in a lively but casual
@@ -26,8 +26,8 @@ const About = () => {
               alt="Adrian and Mario"
             />
           </article>
-        </div>
-      </div>
+        {/* </div> */}
+      {/* </div> */}
     </section>
   );
 };

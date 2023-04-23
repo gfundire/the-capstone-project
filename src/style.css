@@ -58,3 +58,15 @@ p.lead-text {
   font-weight: bold;
   font-size: 18pt;
 }
+
+
+.display-title {
+  font-family: 'Markazi Text', serif;
+  font-size: 64pt;
+  font-weight: 400;
+}
+
+.sub-title {
+  font-family: 'Markazi Text', serif;
+  font-size: 40pt;
+}
