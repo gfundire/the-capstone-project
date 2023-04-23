@@ -15,7 +15,7 @@ const Specials = () => {
           <Button className="float-end">Online Menu</Button>
         </div>
       </div>
-      <div className="card-area py-5">
+      <div className="card-area">
         {dishes.map((d) => (
           <Card
             key={d.name}

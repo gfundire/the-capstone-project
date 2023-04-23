@@ -8,19 +8,17 @@ const Testimonials = () => {
 
   if (profiles.length > 0) {
     return (
-      <section className="testimonials">
-        <div className="container">
-          <h3 className="text-center section-title">Testimonials</h3>
-          <div className="row pt-5">
-            {profiles.map((p) => (
-              <Profile
-                key={p.email}
-                first={p.name.first}
-                last={p.name.last}
-                src={p.picture.medium}
-              />
-            ))}
-          </div>
+      <section className=" px-5 testimonials">
+        <h3 className="text-center section-title">Testimonials</h3>
+        <div className="row pt-5">
+          {profiles.map((p) => (
+            <Profile
+              key={p.email}
+              first={p.name.first}
+              last={p.name.last}
+              src={p.picture.medium}
+            />
+          ))}
         </div>
       </section>
     );

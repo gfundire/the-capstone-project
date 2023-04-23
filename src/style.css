@@ -22,6 +22,7 @@ main {
   background-color: var(--yellow-primary);
   color: black;
   border: none;
+  border-radius: 16pt;
 }
 
 .btn:hover {
@@ -70,3 +71,21 @@ p.lead-text {
   font-family: 'Markazi Text', serif;
   font-size: 40pt;
 }
+
+.card{
+  border-radius: 16pt;
+}
+
+.card-img-top{
+  border-radius: 16pt 16pt 0 0;
+}
+
+.card-text{
+  
+}
+
+.bg-gray{
+  background-color: #D9D9D9;
+}
+
+

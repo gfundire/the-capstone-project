@@ -4,8 +4,8 @@
   justify-content: center;
 }
 
-.about{
-  background-color: #EE9972;
+.about {
+  background-color: #ee9972;
 }
 
 h1 {
@@ -19,6 +19,7 @@ h2 {
   font-size: 40pt;
 }
 
-.color-primary {
-  
+.about-img{
+  border-radius: 16pt;
+  height: 100%;
 }
