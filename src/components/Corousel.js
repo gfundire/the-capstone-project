@@ -29,8 +29,8 @@ const Corousel = () => {
         <div className="carousel-item active">
           <img src="https://thumbs2.imgbox.com/75/4e/tax9MvIQ_t.jpg" className="d-block w-100" alt="little Lemon" />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Little Lemon</h5>
-            <p>We offer the best deals for any occassion.</p>
+            <h5 className="display-title color-primary">Little Lemon</h5>
+            <p className="lead-text">We offer the best deals for any occassion.</p>
           </div>
         </div>
         <div className="carousel-item">

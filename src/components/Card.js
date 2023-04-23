@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = ({ title, text, src, price }) => {
   return (
-    <div className="card mb-3" style={{ width: '18rem' }}>
+    <article className="card mb-3" style={{ width: '18rem' }}>
       <img className="card-img-top" src={src} alt={title} />
       <div className="card-body px-0">
         <h5 className="card-title bg-gray p-3">
@@ -19,7 +19,7 @@ const Card = ({ title, text, src, price }) => {
           </a>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
