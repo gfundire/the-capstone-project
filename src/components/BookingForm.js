@@ -22,7 +22,7 @@ const BookingForm = ({
         <Corousel />
       </section>
       <section>
-        <h1 className="text-center my-5">Find a Table for Any Occasion</h1>
+        <h1 className="text-center section-title my-5">Find a Table for Any Occasion</h1>
         <form className="row g-3 mb-5 px-5" onSubmit={handleSubmit}>
           <div className="col-12 col-md-6">
             <label htmlFor="res_date" className="form-label">

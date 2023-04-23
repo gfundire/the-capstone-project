@@ -7,15 +7,15 @@ const ConfirmedBooking = () => {
     <>
       <Corousel />
       <section className="container success pt-5">
-        <div className="mt-5 text-center">
+        <div className="mt-5 text-center text-white" aria-hidden="true">
           <i className="bi bi-check-circle"></i>
         </div>
-        <h1 className="my-3 text-center">Success!</h1>
-        <p>
-          Your Table Reservation was successful, your invoice was sent via your
-          email address.
+        <h1 className="my-3 section-title text-center text-white">Success!</h1>
+        <p className="lead-text text-white">
+          Your Table Reservation was successful, your invoice was sent to your
+          email.
         </p>
-        <p>Thank you for choosing us.</p>
+        <p className="lead-text text-white">Thank you for choosing us.</p>
       </section>
     </>
   );

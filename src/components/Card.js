@@ -11,11 +11,16 @@ const Card = ({ title, text, src, price }) => {
         </h5>
         <p className="card-text px-3">{text}</p>
         <div className="px-3">
-          <a href="#" className="btn btn-primary">
-            Order a delivery
+          <a href="#" className="text-white" aria-hidden="true">
+            <img
+              src="https://images2.imgbox.com/76/67/xLSAKY7E_o.png"
+              alt="order a delivery"
+              style={{ width: '35px' }}
+              aria-role="link"              
+            />
           </a>
           <a href="#" className="btn btn-primary float-end">
-            add to cart
+            Order a delivery
           </a>
         </div>
       </div>

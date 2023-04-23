@@ -12,10 +12,15 @@ h2 {
 
 body {
   background-color: var(--green-primary);
+  padding: 0;
 }
 
 main {
   min-height: 100vh;
+}
+.btn:active {
+  background-color: #EE9972;
+  color: black;
 }
 
 .btn {
@@ -26,7 +31,8 @@ main {
 }
 
 .btn:hover {
-  background-color: black;
+  background-color: #EE9972;
+  color: black;
 }
 
 .round {

@@ -8,7 +8,7 @@ const Testimonials = () => {
 
   if (profiles.length > 0) {
     return (
-      <section className=" px-5 testimonials">
+      <section className=" px-5 testimonials w-100">
         <h3 className="text-center section-title">Testimonials</h3>
         <div className="row pt-5">
           {profiles.map((p) => (

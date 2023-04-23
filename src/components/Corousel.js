@@ -30,20 +30,20 @@ const Corousel = () => {
           <img src="https://thumbs2.imgbox.com/75/4e/tax9MvIQ_t.jpg" className="d-block w-100" alt="little Lemon" />
           <div className="carousel-caption d-none d-md-block">
             <h5 className="display-title color-primary">Little Lemon</h5>
-            <p className="lead-text">We offer the best deals for any occassion.</p>
+            <p className="lead-text text-dark">We offer the best deals for any occassion.</p>
           </div>
         </div>
         <div className="carousel-item">
           <img src="https://thumbs2.imgbox.com/eb/86/nABGGzMP_t.png" className="d-block w-100" alt="Little Lemon" />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Little Lemon</h5>
+            <h5 className="display-title">Little Lemon</h5>
             <p>Our service is second to none.</p>
           </div>
         </div>
         <div className="carousel-item">
           <img src="https://thumbs2.imgbox.com/c5/2c/Sif1sLAS_t.png" className="d-block w-100" alt="Little Lemon" />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Little Lemon</h5>
+            <h5 className="display-title">Little Lemon</h5>
             <p>Come and taste our  unbeatable recipes</p>
           </div>
         </div>

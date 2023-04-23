@@ -4,5 +4,6 @@
 }
 
 div.profile{
-  background-color: #FBDABB;  
+  background-color: #FBDABB; 
+  max-width: 300px; 
 }
