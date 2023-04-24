@@ -10,7 +10,8 @@ const Testimonials = () => {
     return (
       <section className=" px-5 testimonials w-100">
         <h3 className="text-center section-title">Testimonials</h3>
-        <div className="row pt-5">
+
+        <div className="row pt-3">
           {profiles.map((p) => (
             <Profile
               key={p.email}

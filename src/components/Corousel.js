@@ -2,7 +2,11 @@ import React from 'react';
 
 const Corousel = () => {
   return (
-    <section id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
+    <section
+      id="carouselExampleCaptions"
+      className="carousel slide"
+      data-bs-ride="carousel"
+    >
       <div className="carousel-indicators">
         <button
           type="button"
@@ -25,29 +29,43 @@ const Corousel = () => {
           aria-label="Slide 3"
         ></button>
       </div>
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img src="https://thumbs2.imgbox.com/75/4e/tax9MvIQ_t.jpg" className="d-block w-100" alt="little Lemon" />
+      <aside className="carousel-inner">
+        <article className="carousel-item active">
+          <img
+            src="https://thumbs2.imgbox.com/75/4e/tax9MvIQ_t.jpg"
+            className="d-block w-100"
+            alt="little Lemon"
+          />
           <div className="carousel-caption d-none d-md-block">
             <h5 className="display-title color-primary">Little Lemon</h5>
-            <p className="lead-text text-dark">We offer the best deals for any occassion.</p>
+            <p className="lead-text text-dark">
+              We offer the best deals for any occassion.
+            </p>
           </div>
-        </div>
-        <div className="carousel-item">
-          <img src="https://thumbs2.imgbox.com/eb/86/nABGGzMP_t.png" className="d-block w-100" alt="Little Lemon" />
+        </article>
+        <article className="carousel-item">
+          <img
+            src="https://thumbs2.imgbox.com/eb/86/nABGGzMP_t.png"
+            className="d-block w-100"
+            alt="Little Lemon"
+          />
           <div className="carousel-caption d-none d-md-block">
             <h5 className="display-title">Little Lemon</h5>
             <p>Our service is second to none.</p>
           </div>
-        </div>
-        <div className="carousel-item">
-          <img src="https://thumbs2.imgbox.com/c5/2c/Sif1sLAS_t.png" className="d-block w-100" alt="Little Lemon" />
+        </article>
+        <article className="carousel-item">
+          <img
+            src="https://thumbs2.imgbox.com/c5/2c/Sif1sLAS_t.png"
+            className="d-block w-100"
+            alt="Little Lemon"
+          />
           <div className="carousel-caption d-none d-md-block">
             <h5 className="display-title">Little Lemon</h5>
-            <p>Come and taste our  unbeatable recipes</p>
+            <p>Come and have taste of our unbeatable recipes</p>
           </div>
-        </div>
-      </div>
+        </article>
+      </aside>
       <button
         className="carousel-control-prev"
         type="button"
@@ -71,5 +89,3 @@ const Corousel = () => {
 };
 
 export default Corousel;
-
-

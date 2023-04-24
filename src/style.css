@@ -3,16 +3,12 @@
 :root {
   --yellow-primary: #f4ce14;
   --green-primary: #495e57;
+  --orange-primary:#EE9972;
+  --karla-font:'Karla', serif;
 }
 
-/* h1,
-h2 {
-  margin: 0;
-} */
-
 body {
-  background-color: var(--green-primary);
-  padding: 0;
+  background-color: var(--green-primary);  
 }
 
 main {
@@ -31,8 +27,13 @@ main {
 }
 
 .btn:hover {
-  background-color: #EE9972;
+  background-color: var(--yellow-primary);
   color: black;
+  opacity: .8;
+}
+
+.btn:disabled{
+  background-color: var(--orange-primary);  
 }
 
 .round {
@@ -40,27 +41,29 @@ main {
 }
 
 .section-title {
-  font-family: 'Karla', serif;
+  font-family: var(--karla-font);
   font-size: 20pt;
   font-weight: bolder;
   text-transform: uppercase;
 }
 
-p {
-  font-family: 'Karla', serif;
-  font-size: 16pt;
-  font-weight: 400;  
-  line-height: 1.5;
-}
-
 .lead-text {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--karla-font);
   font-weight: 400;
   font-size: 18pt;
+  color: black;
+}
+
+.card-text{
+  font-family: var(--karla-font);
+  font-weight: 100;
+  font-size: 16pt;
+  line-height: 1.5;
+  text-align: left;
 }
 
 .card-title {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--karla-font);
   font-weight: bold;
   font-size: 18pt;
 }
@@ -94,4 +97,19 @@ p {
   font-size: 3em;
 }
 
+div.carousel-indicators > button:active{
+  background-color: var(--green-primary);
+}
+
+.price{
+  font-family: var(--karla-font);
+  font-weight: 500;
+  font-size: 16pt;
+  line-height: 1.5;
+  color: var(--green-primary);
+}
+
+.bi-star-fill,.bi-star-half{
+  color: var(--green-primary);
+}
 

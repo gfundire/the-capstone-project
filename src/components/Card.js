@@ -7,7 +7,7 @@ const Card = ({ title, text, src, price }) => {
       <div className="card-body px-0">
         <h5 className="card-title bg-gray p-3">
           {title}
-          <span className="float-end">{price}</span>
+          <span className="float-end price">{price}</span>
         </h5>
         <p className="card-text px-3">{text}</p>
         <div className="px-3">

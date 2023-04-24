@@ -5,13 +5,12 @@ const About = () => {
   return (
     <section className="about p-5 row">
       <article className="col-md-6 about-section">
-        <h3 className="text-white display-title">Little Lemon</h3>
-        <h4 className="text-white mb-5 sub-title">Chicago</h4>
-        <p>
+        <h2 className="text-white section-title mb-4">About Us</h2>        
+        <p className='lead-text'>
           Little Lemon is a charming neighbourhood bistro that serves a simple
           food and classic cocktails in a lively but casual environment.
         </p>
-        <p className='pb-3'>
+        <p className='pb-3 lead-text'>
           Co-owned by Adrian and Mario, the restaurant features a locally
           sourced menu with daily specials.
         </p>
