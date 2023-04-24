@@ -3,19 +3,19 @@
 :root {
   --yellow-primary: #f4ce14;
   --green-primary: #495e57;
-  --orange-primary:#EE9972;
-  --karla-font:'Karla', serif;
+  --orange-primary: #ee9972;
+  --karla-font: 'Karla', serif;
 }
 
 body {
-  background-color: var(--green-primary);  
+  background-color: var(--green-primary);
 }
 
 main {
   min-height: 100vh;
 }
 .btn:active {
-  background-color: #EE9972;
+  background-color: #ee9972;
   color: black;
 }
 
@@ -29,11 +29,11 @@ main {
 .btn:hover {
   background-color: var(--yellow-primary);
   color: black;
-  opacity: .8;
+  opacity: 0.8;
 }
 
-.btn:disabled{
-  background-color: var(--orange-primary);  
+.btn:disabled {
+  background-color: var(--orange-primary);
 }
 
 .round {
@@ -54,7 +54,7 @@ main {
   color: black;
 }
 
-.card-text{
+.card-text {
   font-family: var(--karla-font);
   font-weight: 100;
   font-size: 16pt;
@@ -68,7 +68,6 @@ main {
   font-size: 18pt;
 }
 
-
 .display-title {
   font-family: 'Markazi Text', serif;
   font-size: 64pt;
@@ -80,28 +79,27 @@ main {
   font-size: 40pt;
 }
 
-.card{
+.card {
   border-radius: 16pt;
 }
 
-.card-img-top{
+.card-img-top {
   border-radius: 16pt 16pt 0 0;
 }
 
-
-.bg-gray{
-  background-color: #D9D9D9;
+.bg-gray {
+  background-color: #d9d9d9;
 }
 
-.bi-check-circle{
+.bi-check-circle {
   font-size: 3em;
 }
 
-div.carousel-indicators > button:active{
+div.carousel-indicators > button:active {
   background-color: var(--green-primary);
 }
 
-.price{
+.price {
   font-family: var(--karla-font);
   font-weight: 500;
   font-size: 16pt;
@@ -109,7 +107,7 @@ div.carousel-indicators > button:active{
   color: var(--green-primary);
 }
 
-.bi-star-fill,.bi-star-half{
+.bi-star-fill,
+.bi-star-half {
   color: var(--green-primary);
 }
-
