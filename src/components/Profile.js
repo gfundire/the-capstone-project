@@ -13,8 +13,8 @@ const Profile = ({ src, first, last }) => {
     const starslength = Math.floor(Math.random() * 5) + 1;
     const stars = [];
     for (let i = 1; i <= starslength; i++) {
-      stars.push('star');
-    }
+      stars.push('star'+i);
+    }    
     return stars;
   }
 
@@ -25,7 +25,7 @@ const Profile = ({ src, first, last }) => {
         <h5 className="text-center card-title mt-1">{first + ' ' + last}</h5>
         <div className="text-center mt-1">
           {stars.map((star) => (
-            <Star />
+            <Star key={star} />
           ))}
           {stars.length < 5 && <StarHalf />}
         </div>
