@@ -136,3 +136,13 @@ ul > li > a:link {
   font-size: 16pt;
   line-height: 1.5;
 }
+
+.profile:hover,.card:hover{
+  box-shadow: 0 .5px  0 .5px rgb(148, 147, 147);
+  border: 2px rgb(148, 147, 147);
+  opacity: .9;
+}
+
+.star:hover{
+  color: #ee9972; 
+}
