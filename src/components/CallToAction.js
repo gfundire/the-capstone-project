@@ -15,13 +15,7 @@ const CallToAction = () => {
           We are a family owned Mediterranean restaurant, focused on traditional
           recipes served with a modern twist.
         </p>
-        <button
-          className="btn btn-primary"
-          aria-label="On Click"
-          onClick={handleClik}
-        >
-          Reserve a Table
-        </button>
+        <Button onClick={handleClik}>Reserve a Table</Button>
       </div>
       <div className="col-md-6 mb-3">
         <img
