@@ -7,6 +7,7 @@ import './specials.css';
 const Specials = () => {
   return (
     <section className="specials p-5 w-100">
+      <div className="container">
       <div className="row my-3">
         <div className="col">
           <h2 className="section-title">This week's Specials</h2>
@@ -25,6 +26,7 @@ const Specials = () => {
             price={d.price}
           />
         ))}
+      </div>
       </div>
     </section>
   );

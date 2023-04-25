@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: var(--green-primary);  
+  background-color: var(--green-primary);
 }
 
 main {
@@ -30,7 +30,7 @@ main {
   /* padding:1.2em 2em ; */
 }
 
-.card .btn{
+.card .btn {
   font-weight: 100;
 }
 
@@ -62,6 +62,7 @@ main {
   color: black;
 }
 
+footer,
 .card-text {
   font-family: var(--karla-font);
   font-weight: 100;
@@ -120,7 +121,18 @@ div.carousel-indicators > button:active {
   color: var(--green-primary);
 }
 
-.wrapper{
-  max-width:70%;
+.wrapper {
+  max-width: 70%;
   margin: 0 auto;
+}
+
+nav ul {
+  justify-content: space-between;
+}
+ul > li > a:link {
+  color: black;
+  font-family: var(--karla-font);
+  font-weight: 100;
+  font-size: 16pt;
+  line-height: 1.5;
 }
