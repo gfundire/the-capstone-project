@@ -24,6 +24,14 @@ main {
   color: black;
   border: none;
   border-radius: 16pt;
+  font-family: var(--karla-font);
+  font-weight: 500;
+  font-size: 16pt;
+  /* padding:1.2em 2em ; */
+}
+
+.card .btn{
+  font-weight: 100;
 }
 
 .btn:hover {
