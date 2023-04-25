@@ -15,8 +15,7 @@ const Card = ({ title, text, src, price }) => {
             <img
               src="https://images2.imgbox.com/76/67/xLSAKY7E_o.png"
               alt="order a delivery"
-              style={{ width: '35px' }}
-              aria-role="link"              
+              style={{ width: '35px' }}                           
             />
           </a>
           <a href="#" className="btn btn-primary float-end">
