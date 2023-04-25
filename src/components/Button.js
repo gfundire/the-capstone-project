@@ -10,8 +10,8 @@ const Button = ({
   return (
     <button
       type={type}
-      className={'btn btn-primary px-4 py-3' + className}
       onClick={onClick}
+      className={'btn btn-primary px-4 py-3 ' + className}
       aria-label={ariaLabel}
     >
       {children}

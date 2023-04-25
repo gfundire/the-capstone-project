@@ -15,10 +15,10 @@ const Card = ({ title, text, src, price }) => {
             <img
               src="https://images2.imgbox.com/76/67/xLSAKY7E_o.png"
               alt="order a delivery"
-              style={{ width: '35px' }}                           
+              style={{ width: '35px' }}
             />
           </a>
-          <a href="#" className="btn btn-primary float-end">
+          <a href="#" className="btn btn-primary px-4 float-end">
             Order a delivery
           </a>
         </div>

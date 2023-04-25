@@ -8,10 +8,10 @@ const Specials = () => {
   return (
     <section className="specials p-5 w-100">
       <div className="row my-3">
-        <div className="col-8">
+        <div className="col">
           <h2 className="section-title">This week's Specials</h2>
         </div>
-        <div className="col-4">
+        <div className="col">
           <Button className="float-end">Online Menu</Button>
         </div>
       </div>

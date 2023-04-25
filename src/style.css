@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: var(--green-primary);
+  background-color: var(--green-primary);  
 }
 
 main {
@@ -118,4 +118,9 @@ div.carousel-indicators > button:active {
 .bi-star-fill,
 .bi-star-half {
   color: var(--green-primary);
+}
+
+.wrapper{
+  max-width:70%;
+  margin: 0 auto;
 }
