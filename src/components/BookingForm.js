@@ -157,16 +157,14 @@ const BookingForm = ({
               )} */}
               </div>
             </div>
-            <div className="col-12">
-              <button
-                aria-label="On Click"
-                type="submit"
-                className="btn btn-primary btn-lg btn-block py-3 col-10 offset-1"
-                disabled={!formValid}
-              >
-                Book Table
-              </button>
-            </div>
+            <button
+              aria-label="On Click"
+              type="submit"
+              className="btn btn-primary btn-lg btn-block"
+              disabled={!formValid}
+            >
+              Book Table
+            </button>
           </form>
         </div>
       </section>
