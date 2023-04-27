@@ -32,7 +32,7 @@ const Corousel = () => {
       <aside className="carousel-inner">
         <article className="carousel-item active">
           <img
-            src="https://thumbs2.imgbox.com/75/4e/tax9MvIQ_t.jpg"
+            src="https://images2.imgbox.com/95/07/uPBDMmmw_o.png"
             className="d-block w-100"
             alt="little Lemon"
           />
@@ -45,7 +45,7 @@ const Corousel = () => {
         </article>
         <article className="carousel-item">
           <img
-            src="https://thumbs2.imgbox.com/eb/86/nABGGzMP_t.png"
+            src="https://images2.imgbox.com/55/bd/U6sk8n65_o.png"
             className="d-block w-100"
             alt="Little Lemon"
           />
@@ -56,7 +56,7 @@ const Corousel = () => {
         </article>
         <article className="carousel-item">
           <img
-            src="https://thumbs2.imgbox.com/c5/2c/Sif1sLAS_t.png"
+            src="https://images2.imgbox.com/74/39/QKHW6baW_o.png"
             className="d-block w-100"
             alt="Little Lemon"
           />
