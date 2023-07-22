@@ -147,3 +147,9 @@ ul > li > a:link {
 .star:hover{
   color: #ee9972; 
 }
+
+@media screen and (max-width:500px){
+ body{
+   /* font-size:10pt; */
+ }
+}
