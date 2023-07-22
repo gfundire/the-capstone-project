@@ -9,6 +9,7 @@
 
 body {
   background-color: var(--green-primary);
+  font-size:16pt; 
 }
 
 main {
@@ -25,8 +26,8 @@ main {
   border: none;
   border-radius: 16pt;
   font-family: var(--karla-font);
-  font-weight: 500;
-  font-size: 16pt;
+  font-weight: 500;  
+  font-size: .9em;
   /* padding:1.2em 2em ; */
 }
 
@@ -50,7 +51,7 @@ main {
 
 .section-title {
   font-family: var(--karla-font);
-  font-size: 20pt;
+  font-size: 1.2em;
   font-weight: bolder;
   text-transform: uppercase;
 }
@@ -58,15 +59,15 @@ main {
 .lead-text {
   font-family: var(--karla-font);
   font-weight: 400;
-  font-size: 18pt;
+  font-size: .9em;
   color: black;
 }
 
 footer,
 .card-text {
   font-family: var(--karla-font);
-  font-weight: 100;
-  font-size: 16pt;
+  /* font-weight: 100; */
+  font-size: .8em;
   line-height: 1.5;
   text-align: left;
 }
